@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>NGL</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+    <link rel="icon" href="ngl/img/favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="ngl/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="ngl/css/main.css" />
+    <link rel="stylesheet" href="ngl/css/dark.css" id="theme" />
+
+</head>
+
+<body>
+
+    <script src="ngl/js/build/ngl.full.min.js"></script>
+
+    <!-- EXTRA -->
+    <script src="ngl/js/extra/examples.js"></script>
+
+    <script>
+
+        if( !Detector.webgl ) Detector.addGetWebGLMessage();
+
+        NGL.mainScriptFilePath = "ngl/js/build/ngl.full.min.js";
+        NGL.cssDirectory = "ngl/css/";
+
+        // Datasources
+
+        NGL.DatasourceRegistry.add(
+            "data", new NGL.StaticDatasource( "data/" )
+        );
+
+        // Plugins
+
+        NGL.PluginRegistry.add( "fragfit", "plugins/fragfit.plugin" );
+        NGL.PluginRegistry.add( "fragfit-example", "plugins/fragfit-example.plugin" );
+        NGL.PluginRegistry.add( "fragfit-job", "plugins/fragfit-job.plugin" );
+        NGL.PluginRegistry.add( "fragfit-loader", "plugins/fragfit-loader.plugin" );
+
+        NGL.PluginRegistry.add( "fragsearch", "plugins/fragsearch.plugin" );
+        NGL.PluginRegistry.add( "fragsearch-example", "plugins/fragsearch-example.plugin" );
+        NGL.PluginRegistry.add( "fragsearch-job", "plugins/fragsearch-job.plugin" );
+        NGL.PluginRegistry.add( "fragsearch-loader", "plugins/fragsearch-loader.plugin" );
+
+        //
+
+        function onInit(){
+            var stage = new NGL.Stage();
+            NGL.StageWidget( stage );
+
+            var example = NGL.GET( "example" );
+            if( example ) NGL.ExampleRegistry.load( example, stage );
+
+            var load = NGL.GET( "load" );
+            if( load ) stage.loadFile( load, { defaultRepresentation: true } );
+
+            var plugin = NGL.GET( "plugin" );
+            if( plugin ) NGL.PluginRegistry.load( plugin, stage );
+        }
+
+        document.addEventListener( "DOMContentLoaded", function(){
+            NGL.init( onInit );
+        } );
+
+    </script>
+
+</body>
+
+</html>

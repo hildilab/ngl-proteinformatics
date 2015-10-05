@@ -1,0 +1,1126 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"pcik",
+				"pickingFlag"
+			],
+			[
+				"pick",
+				"pickingMaterial"
+			],
+			[
+				"picking",
+				"pickingColor"
+			],
+			[
+				"use",
+				"userData"
+			],
+			[
+				"value",
+				"valueFunc"
+			],
+			[
+				"val",
+				"valueFunc"
+			],
+			[
+				"need",
+				"needsUpdate"
+			],
+			[
+				"uni",
+				"uniform"
+			],
+			[
+				"frag",
+				"FragfitPreset"
+			],
+			[
+				"po",
+				"postId"
+			],
+			[
+				"stat",
+				"statusIntervalId"
+			],
+			[
+				"cart",
+				"cartoonRepr"
+			],
+			[
+				"mol",
+				"molsurfRepr"
+			],
+			[
+				"iso",
+				"isosurfRepr"
+			],
+			[
+				"neg",
+				"negIsosurfRepr"
+			],
+			[
+				"pos",
+				"posIsosurfRepr"
+			],
+			[
+				"set",
+				"setMarginRight"
+			],
+			[
+				"load",
+				"loadFiles"
+			],
+			[
+				"Apbs",
+				"ApbsPreset"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"comp",
+				"compDict"
+			],
+			[
+				"lo",
+				"loadBtn"
+			],
+			[
+				"pqr",
+				"pqrFile"
+			],
+			[
+				"for",
+				"formData"
+			],
+			[
+				"type",
+				"typeof"
+			],
+			[
+				"url",
+				"urlFor"
+			],
+			[
+				"sta",
+				"statusChanged"
+			],
+			[
+				"status",
+				"statusChanged"
+			],
+			[
+				"ser",
+				"server"
+			],
+			[
+				"Ser",
+				"ServerWidget"
+			],
+			[
+				"server",
+				"serverWidget"
+			],
+			[
+				"radiu",
+				"radius"
+			],
+			[
+				"dot",
+				"dotType"
+			],
+			[
+				"del",
+				"deltaLineCount"
+			],
+			[
+				"head",
+				"headerLines"
+			],
+			[
+				"matri",
+				"matrixWorld"
+			],
+			[
+				"th",
+				"thresholdMin"
+			],
+			[
+				"thre",
+				"thresholdMin"
+			],
+			[
+				"colo",
+				"colorMaker"
+			],
+			[
+				"vert",
+				"vertexShader"
+			],
+			[
+				"def",
+				"defines"
+			],
+			[
+				"shad",
+				"shaderText"
+			],
+			[
+				"bfac",
+				"bfactor"
+			],
+			[
+				"get",
+				"getColorParams"
+			],
+			[
+				"getcol",
+				"getColorParams"
+			],
+			[
+				"atomin",
+				"atomindexScale"
+			],
+			[
+				"atom",
+				"atomCount"
+			],
+			[
+				"Resid",
+				"ResidueColors"
+			],
+			[
+				"elem",
+				"elemColors"
+			],
+			[
+				"getCol",
+				"getColorParams"
+			],
+			[
+				"chain",
+				"chainNames"
+			],
+			[
+				"Chain",
+				"ChainindexColorMaker"
+			],
+			[
+				"color",
+				"colorScheme"
+			],
+			[
+				"getS",
+				"getScheme"
+			],
+			[
+				"Colo",
+				"ColorMakerRegistry"
+			],
+			[
+				"contr",
+				"constructor"
+			],
+			[
+				"prot",
+				"prototype"
+			],
+			[
+				"pro",
+				"prototype"
+			],
+			[
+				"li",
+				"lightgrey"
+			],
+			[
+				"link",
+				"linkCountScheme"
+			],
+			[
+				"res",
+				"resToSele"
+			],
+			[
+				"struc",
+				"structure"
+			],
+			[
+				"structu",
+				"structureSubset"
+			],
+			[
+				"bb",
+				"bbStructure"
+			],
+			[
+				"op",
+				"opaqueBack"
+			],
+			[
+				"cylin",
+				"cylinderBuffer"
+			],
+			[
+				"lab",
+				"labelSize"
+			],
+			[
+				"la",
+				"labelSize"
+			],
+			[
+				"text",
+				"textBuffer"
+			],
+			[
+				"cons",
+				"console"
+			],
+			[
+				"center",
+				"centerView"
+			],
+			[
+				"hel",
+				"helixRun"
+			],
+			[
+				"heli",
+				"helices"
+			],
+			[
+				"helix",
+				"helixRun"
+			],
+			[
+				"im",
+				"importScripts"
+			],
+			[
+				"loac",
+				"localStorage"
+			],
+			[
+				"model",
+				"modelIdx"
+			],
+			[
+				"sub",
+				"substr"
+			],
+			[
+				"ca",
+				"cAlphaOnly"
+			],
+			[
+				"as",
+				"asTrajectory"
+			],
+			[
+				"mode",
+				"modelIdx"
+			],
+			[
+				"resn",
+				"resname"
+			],
+			[
+				"parse",
+				"parseInt"
+			],
+			[
+				"currentRe",
+				"currentRecordType"
+			],
+			[
+				"reco",
+				"recordTypes"
+			],
+			[
+				"con",
+				"context"
+			],
+			[
+				"mod",
+				"modelIndex"
+			],
+			[
+				"mo",
+				"modelDict"
+			],
+			[
+				"downa",
+				"downloadName"
+			],
+			[
+				"prep",
+				"prepareCrosslinkData"
+			],
+			[
+				"resno",
+				"resnoList"
+			],
+			[
+				"chun",
+				"chunkCount"
+			],
+			[
+				"_parse",
+				"_parseChunkOfLines"
+			],
+			[
+				"_par",
+				"_parseChunkOfLines"
+			],
+			[
+				"from",
+				"fromJSON"
+			],
+			[
+				"tas",
+				"taskCountChanged"
+			],
+			[
+				"ta",
+				"taskCount"
+			],
+			[
+				"sele",
+				"selection"
+			],
+			[
+				"lic",
+				"licoriceRepr"
+			],
+			[
+				"file",
+				"fileList"
+			],
+			[
+				"Color",
+				"ColorFactory"
+			],
+			[
+				"Atom",
+				"Atomnames"
+			],
+			[
+				"direc",
+				"directionAtomname2"
+			],
+			[
+				"scal",
+				"scaleFactor"
+			],
+			[
+				"Edt",
+				"EDTSurface"
+			],
+			[
+				"geo",
+				"geometry"
+			],
+			[
+				"call",
+				"callback"
+			],
+			[
+				"font-",
+				"font-weight"
+			],
+			[
+				"is",
+				"isolevelType"
+			],
+			[
+				"repr",
+				"reprList"
+			],
+			[
+				"sym",
+				"symopDict"
+			],
+			[
+				"com",
+				"combinedString"
+			],
+			[
+				"bond",
+				"bondSet"
+			],
+			[
+				"decom",
+				"decompress"
+			],
+			[
+				"ret",
+				"returnData"
+			],
+			[
+				"dec",
+				"decompress"
+			],
+			[
+				"play",
+				"player"
+			],
+			[
+				"up",
+				"updateRequired"
+			],
+			[
+				"path",
+				"pathList"
+			],
+			[
+				"pend",
+				"pendingLoop"
+			],
+			[
+				"add",
+				"addTrajectory"
+			],
+			[
+				"setMargin",
+				"setMarginLeft"
+			],
+			[
+				"setD",
+				"setDisposeFunction"
+			],
+			[
+				"dispose",
+				"disposeAll"
+			],
+			[
+				"Con",
+				"contacts"
+			],
+			[
+				"atomse",
+				"atomSet1"
+			],
+			[
+				"cent",
+				"centerSele"
+			],
+			[
+				"node",
+				"nodeList"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/home/arose/dev/repos/ngl-proteinformatics/README",
+			"settings":
+			{
+				"buffer_size": 331,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 1869,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"mar",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"synpy",
+				"Set Syntax: Python"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"ssba",
+				"Set Syntax: Shell Script (Bash)"
+			],
+			[
+				"ssjson",
+				"Set Syntax: JSON"
+			],
+			[
+				"ssb",
+				"Set Syntax: Shell Script (Bash)"
+			],
+			[
+				"ssbas",
+				"Set Syntax: Shell Script (Bash)"
+			],
+			[
+				"ssxml",
+				"Set Syntax: XML"
+			],
+			[
+				"fold",
+				"Code Folding: Unfold All"
+			],
+			[
+				"ssja",
+				"Set Syntax: JavaScript"
+			]
+		],
+		"width": 467.0
+	},
+	"console":
+	{
+		"height": 139.0,
+		"history":
+		[
+			"sublime.copy_path",
+			"copy_path",
+			"opy_path"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/arose/dev/repos/ngl-proteinformatics"
+	],
+	"file_history":
+	[
+		"/home/arose/dev/repos/ngl-proteinformatics/index.html",
+		"/home/arose/dev/repos/ngl-proteinformatics/www/index.html",
+		"/home/arose/dev/repos/three.js/examples/webgl_interactive_cubes_instances_gpu.html",
+		"/home/arose/dev/repos/three.js/examples/webgl_interactive_cubes_gpu.html",
+		"/home/arose/dev/repos/three.js/examples/webgl_interactive_instances_gpu.html",
+		"/home/arose/Dropbox/ngl/fragfit/link_it/edited_linker3.pdb",
+		"/home/arose/Dropbox/ngl/fragfit/loop_correl/ori_pdb_linker_file3.pdb",
+		"/home/arose/dev/repos/provi/app/static/tmp/apbs_4e048563-c8c7-40a3-8d22-b2de7b5d2a6b/tool.log",
+		"/home/arose/dev/repos/provi/app/static/tmp/apbs_e3d07158-7e85-4133-9677-829d37e0d030/input_pdb_file.pdb",
+		"/home/arose/dev/repos/provi/app/static/tmp/apbs_e3d07158-7e85-4133-9677-829d37e0d030/input_pdb_file.pqr",
+		"/home/arose/dev/repos/ngl/css/light.css",
+		"/home/arose/dev/repos/ngl/css/dark.css",
+		"/home/arose/dev/repos/ngl/css/main.css",
+		"/home/arose/Dropbox/ngl/job/apbs.ngl",
+		"/home/arose/Dropbox/ngl/xinet/crosslink.ngl",
+		"/home/arose/Dropbox/ngl/job/job.ngl",
+		"/home/arose/dev/repos/ngl/js/ngl/loader.js",
+		"/home/arose/dev/repos/ngl/js/lib/ui/ui.extra.js",
+		"/home/arose/dev/repos/ngl/js/lib/async.js",
+		"/home/arose/dev/repos/ngl/js/lib/async.min.js",
+		"/home/arose/dev/repos/ngl/js/lib/ui/ui.ngl.js",
+		"/home/arose/dev/repos/ngl/js/ngl/geometry.js",
+		"/home/arose/dev/repos/ngl/js/ngl/script.js",
+		"/home/arose/dev/repos/ngl/js/ngl/viewer.js",
+		"/home/arose/dev/repos/ngl/js/ngl/buffer.js",
+		"/home/arose/dev/repos/provi/app/static/tmp/apbs_e3d07158-7e85-4133-9677-829d37e0d030/pot.dx",
+		"/home/arose/dev/repos/provi/app/static/tmp/apbs_2c131393-8c87-4362-9061-e1d51561e828/pot.dx",
+		"/home/arose/Downloads/jp311851r_si_002/AminoIPolQnt.lib",
+		"/home/arose/Downloads/jp311851r_si_002/AminoIPolQct.lib",
+		"/home/arose/Downloads/jp311851r_si_002/AminoIPolQ.lib",
+		"/home/arose/dev/repos/ngl/html/ngl.dev.html",
+		"/home/arose/dev/repos/ngl/js/three/controls/TrackballControls.js",
+		"/home/arose/dev/repos/ngl/js/three/cameras/CombinedCamera.js",
+		"/home/arose/dev/repos/ngl/js/three/controls/OrthographicTrackballControls.js",
+		"/home/arose/dev/repos/ngl/shader/SphereImpostor.frag",
+		"/home/arose/dev/repos/ngl/shader/SphereImpostor.vert",
+		"/home/arose/dev/repos/ngl/shader/SphereHalo.frag",
+		"/home/arose/dev/repos/ngl/README.md",
+		"/home/arose/dev/repos/ngl/shader/chunk/light_params.glsl",
+		"/home/arose/dev/repos/ngl/shader/Ribbon.vert",
+		"/home/arose/dev/repos/ngl/shader/SDFFont.frag",
+		"/home/arose/dev/repos/ngl/shader/Line.frag",
+		"/home/arose/dev/repos/ngl/shader/LineSprite.frag",
+		"/home/arose/dev/repos/ngl/shader/ParticleSprite.frag",
+		"/home/arose/dev/repos/ngl/shader/Point.frag",
+		"/home/arose/dev/repos/ngl/shader/Ribbon.frag",
+		"/home/arose/dev/repos/ngl/shader/Quad.frag",
+		"/home/arose/dev/repos/ngl/shader/Quad.vert",
+		"/home/arose/dev/repos/ngl/shader/Mesh.frag",
+		"/home/arose/dev/repos/ngl/shader/ParticleSprite.vert",
+		"/home/arose/dev/repos/ngl/shader/Mesh.vert",
+		"/home/arose/dev/repos/ngl/shader/Point.vert",
+		"/home/arose/dev/repos/ngl/shader/LineSprite.vert",
+		"/home/arose/dev/repos/ngl/shader/Line.vert",
+		"/home/arose/dev/repos/ngl/shader/SDFFont.vert",
+		"/home/arose/dev/repos/ngl/shader/SphereHalo.vert",
+		"/home/arose/dev/repos/ngl/shader/HyperballStickImpostor.vert",
+		"/home/arose/dev/repos/ngl/shader/HyperballStickImpostor.frag",
+		"/home/arose/dev/repos/ngl/shader/CylinderImpostor.frag",
+		"/home/arose/dev/repos/ngl/shader/CylinderImpostor.vert",
+		"/home/arose/dev/repos/ngl/js/ngl/parser.js",
+		"/home/arose/Dropbox/ngl/figures/ribosome.ngl",
+		"/home/arose/dev/repos/ngl/js/ngl/representation.js",
+		"/home/arose/dev/repos/ngl/js/lib/chroma.min.js",
+		"/home/arose/dev/repos/CLMS-UI/network_3D.html",
+		"/home/arose/dev/repos/ngl/js/ngl/gui.js",
+		"/home/arose/Dropbox/ngl/xinet/HSA_BS3_90links.csv",
+		"/home/arose/dev/repos/ngl/js/ngl/core.js",
+		"/home/arose/Dropbox/m2_iper-6-naph_docking/M2-IF210.pdb",
+		"/home/arose/dev/repos/ngl/js/ngl/streamer.js",
+		"/home/arose/dev/repos/ngl/doc/manual/usage/Embedding.html",
+		"/home/arose/dev/repos/ngl/doc/manual/usage/Selection-language.html",
+		"/home/arose/dev/repos/ngl/test/unit/unittests.js",
+		"/home/arose/dev/repos/ngl/doc/manual/usage/Molecular-representations.html",
+		"/home/arose/dev/repos/ngl/html/embedded.dev.html",
+		"/home/arose/dev/repos/ngl/data/script.ngl",
+		"/home/arose/dev/repos/ngl/doc/api/core/Stage.html",
+		"/home/arose/dev/repos/ngl/doc/api/component/Component.html",
+		"/home/arose/Downloads/3EML.pdb",
+		"/home/arose/Downloads/1RB8.pdb",
+		"/home/arose/dev/repos/ngl/doc/manual/usage/File-formats.html",
+		"/home/arose/Dropbox/ngl/anssi/b_residue_sample.html",
+		"/home/arose/dev/repos/ngl/doc/api/object/ColorFactory.html",
+		"/home/arose/dev/repos/ngl/data/4ujd.cif",
+		"/run/user/1000/gvfs/sftp:host=proteinformatics,user=devenv/mnt/bigdisk/development/repos/ngl/app.cfg",
+		"/home/arose/dev/repos/ngl/doc/manual/introduction/Welcome.html",
+		"/home/arose/dev/repos/ngl/doc/manual/introduction/Gallery.html",
+		"/home/arose/dev/repos/ngl/js/three/TypedArrayUtils.js",
+		"/home/arose/dev/repos/ngl/js/lib/ui/ui.js",
+		"/home/arose/dev/repos/ngl/app/chrome/ngl.html",
+		"/home/arose/dev/repos/ngl/test/bench/benchmarks.js",
+		"/home/arose/dev/repos/ngl/test/exp/atomArray.js",
+		"/home/arose/dev/repos/ngl/js/three/three.js",
+		"/home/arose/dev/repos/ngl/app/chrome/ngl.init.js",
+		"/home/arose/dev/repos/ngl/app/chrome/window.html",
+		"/home/arose/dev/repos/ngl/app/chrome/background.js",
+		"/home/arose/dev/repos/ngl/app/chrome/manifest.json",
+		"/home/arose/Dropbox/ngl/results-dock10.sdf",
+		"/home/arose/Dropbox/ngl/results-dock10.mol2",
+		"/home/arose/dev/repos/ngl/js/ngl/structure.js",
+		"/home/arose/Dropbox/ngl/results1.mol2",
+		"/home/arose/dev/repos/ngl/data/adrenalin.mol2",
+		"/home/arose/dev/repos/ngl/js/worker/parse.js",
+		"/home/arose/Dropbox/ngl/dimer-web/dimer-web.ngl",
+		"/home/arose/dev/repos/ngl/data/norovirus.ngl",
+		"/home/arose/Dropbox/ngl/figures/4UJD.cif",
+		"/home/arose/dev/repos/ngl/js/lib/cannon.js",
+		"/home/arose/Downloads/ngraph.forcelayout3d-0.0.12/demo/index.html",
+		"/home/arose/Downloads/ngraph.forcelayout3d-0.0.12/demo/bundle.js",
+		"/home/arose/Downloads/ngraph.forcelayout3d-0.0.12/demo/graph.js",
+		"/home/arose/Downloads/ngraph.forcelayout3d-0.0.12/demo/index.js",
+		"/home/arose/dev/repos/ngl/js/ngl/trajectory.js",
+		"/home/arose/dev/repos/ngl/js/ngl/surface.js",
+		"/home/arose/dev/repos/ngl/js/worker/surf.js",
+		"/run/user/1000/gvfs/sftp:host=proteinformatics,user=devenv/mnt/bigdisk/development/repos/ngldev/js/ngl/script.js",
+		"/run/user/1000/gvfs/sftp:host=proteinformatics,user=devenv/mnt/bigdisk/development/repos/ngldev/js/ngl/loader.js",
+		"/home/arose/dev/repos/ngl/data/sample.json",
+		"/home/arose/dev/repos/ngl/data/sample.csv",
+		"/home/arose/dev/repos/ngl/data/sample.txt",
+		"/home/arose/dev/repos/ngl/data/md_1u19_trj.gro",
+		"/run/user/1000/gvfs/sftp:host=130.73.233.1,user=becarose/home/b/becarose/projects2/rho/3pqr/Gt11unfolded/gs/4/job_hlrn_gs_4.sh",
+		"/home/arose/dev/repos/ngl/js/build/ngl.js",
+		"/home/arose/projects/4Johanna/b2ar-loop_Gs19-3sn6-orient_em.gro",
+		"/home/arose/Dropbox/ngl/ssfe/TMH_templates1_topmodel_renum.pdb",
+		"/run/user/1000/gvfs/sftp:host=proteinformatics,user=devenv/mnt/bigdisk/development/repos/ngldev/html/ssfe-ngl.html",
+		"/run/user/1000/gvfs/sftp:host=proteinformatics,user=devenv/mnt/bigdisk/development/repos/ngldev/app.cfg",
+		"/run/user/1000/gvfs/sftp:host=proteinformatics,user=devenv/mnt/bigdisk/development/projects/ssfe/ssfe.ngl",
+		"/home/arose/Dropbox/ngl/ssfe/ssfe-ngl.html"
+	],
+	"find":
+	{
+		"height": 25.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"<project>"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"needs",
+			"BufferAtt",
+			"bufferRenderer",
+			"values",
+			"color",
+			"prefixVertex",
+			"modelViewMatrix",
+			"normalMatrix",
+			"setProgram",
+			"loadUniformsGeneric",
+			"unif",
+			"unifor",
+			"proper",
+			"setPro",
+			"loadUniformsGeneric",
+			"setPro",
+			"attr",
+			"resize",
+			"Input",
+			"name",
+			"input",
+			"Form",
+			"DirectoryListingWidget",
+			"ComponentP",
+			"pointer",
+			"setMarginL",
+			"ccp4",
+			"mmcif",
+			"select",
+			"EXT_frag_depth",
+			"defines",
+			"addDrawCall",
+			"drawcalls",
+			"draw",
+			"drawC",
+			"drawc",
+			"draw",
+			"getSig",
+			"getIso",
+			"getSigma",
+			"getMaterial",
+			"doubleSided",
+			"ShaderM",
+			"EXT_frag_depth",
+			"extension",
+			"colorWid",
+			"getCol",
+			"setCol",
+			"colorCh",
+			"helixbun",
+			"getSch",
+			"ColorFa",
+			"ColorF",
+			"ColorFa",
+			"getColorF",
+			"new NGL.ColorFactory",
+			"requestRender",
+			"this.viewer.requestRender();",
+			"ColorFactory",
+			"GlobalId",
+			"GlobalI",
+			"nextGlo",
+			"new Struct",
+			"colorF",
+			"colorf",
+			"globalin",
+			"updateObject",
+			"new NGL.BondSet",
+			"updateObject",
+			"_webglObjects",
+			"getNextGid",
+			"NGL.GlobalIdPool.updateObject",
+			"globalinde",
+			"globalin",
+			"margin",
+			"onZeroOnce",
+			"THREE.FloatType",
+			"targ",
+			"0.3",
+			"mmcif",
+			" UA ",
+			"47    \\?",
+			"atom_site",
+			"\\? \\? 47",
+			"106",
+			"open",
+			"console",
+			"onError",
+			"conso",
+			"this.volume",
+			"box ",
+			"5547",
+			"getPrevious",
+			"inProgress",
+			"signals",
+			"Object.def",
+			"var atoms = this.atom",
+			"rebuild(",
+			"rebuild",
+			"rebuild(",
+			"rebuild: fu",
+			"rebuild",
+			"attach",
+			"color",
+			"outli",
+			"side",
+			"consol",
+			"var n = bonds.len",
+			"symop",
+			"setSymmetryOperator",
+			"toJSON",
+			"html",
+			"window",
+			"decompress",
+			"define",
+			"console",
+			"setFrame(",
+			"setFrame",
+			"chain",
+			"tab",
+			"title",
+			"crossOrigin",
+			"flats",
+			"wirefr",
+			"flatShaded: scope.flatShaded,",
+			"wireframe",
+			"this.flatShaded = p.flatShaded || false;",
+			"wirefr"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"DMPC",
+			";",
+			"YPL A",
+			"ASN",
+			"GLU",
+			"$1R",
+			"$1A",
+			"$1G",
+			"$1B",
+			"$1A",
+			"GDP",
+			"351GDP  ",
+			"GDP",
+			"$1 1.00",
+			"$1 1.00)",
+			"$1(1.00)",
+			"$11.00",
+			"  33",
+			"  34",
+			"  35",
+			"$1B",
+			"$1A",
+			"$1B",
+			"ATOM  ",
+			"LRD",
+			"296",
+			"LRD",
+			"296296",
+			" 296",
+			"LRP",
+			"ATOM  ",
+			" _(",
+			"$1R",
+			"$1A",
+			"gold",
+			"resolution 4.0"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/home/arose/dev/repos/ngl-proteinformatics/README",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 331,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								292,
+								292
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 1,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1869,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								830,
+								830
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 41.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.5,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 112.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.rope_python_documentation":
+	{
+		"height": 118.0
+	},
+	"pinned_build_system": "",
+	"project": "ngl-proteinformatics.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"helixorient",
+				"gromacs/4.5.5/src/tools/gmx_helixorient.c"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"iprod",
+				"iprod"
+			]
+		],
+		"width": 683.0
+	},
+	"selected_group": 1,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 327.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
