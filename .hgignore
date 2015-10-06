@@ -1,0 +1,10 @@
+syntax: glob
+
+*.DS_Store
+*.kpf
+*.komodoproject
+.komodotools
+*.sublime-project
+*.sublime-workspace
+
+ngl/

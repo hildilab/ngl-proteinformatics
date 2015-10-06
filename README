@@ -1,15 +1,23 @@
 
-# link into apache www directory
-ln -s /home/arose/dev/repos/ngl-proteinformatics/www/ /var/www/ngl
+link into apache www directory
 
-# make ngl repo available
-ln -s /home/arose/dev/repos/ngl/ /home/arose/dev/repos/ngl-proteinformatics/www
+```bash
+ln -s /path/to/repos/ngl-proteinformatics/www/ /var/www/ngl
+```
+
+make ngl repository available
+
+```bash
+ln -s /path/to/repos/ngl/ /path/to/repos/ngl-proteinformatics/www
+```
 
 
+probably not needed!
 
-<Directory /var/www/ngl-proteinformatics>
+```xml
+<Directory /var/www/ngl>
     Order allow,deny
     Allow from all
     Require all granted
 </Directory>
-
+```
