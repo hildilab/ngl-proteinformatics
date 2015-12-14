@@ -908,10 +908,10 @@ function fragfitStage(){
 
     var newJobBtn = new UI.Button( "New Job" )
         .onClick( makePluginLoader( "fragfit-job" ) );
-
+        
     var exampleBtn = new UI.Button( "Load Example" )
         .onClick( makePluginLoader( "fragfit-example" ) );
-
+        
     var loaderBtn = new UI.Button( "Results Loader" )
         .onClick( makePluginLoader( "fragfit-loader" ) );
 
