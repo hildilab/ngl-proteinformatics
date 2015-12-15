@@ -345,8 +345,7 @@ var ToolWidget = function( tool ){
     container.add(
         form, submit
     );
-
-    // help
+        // help
 
     var helpText = new UI.Text();
     var helpPanel = new UI.OverlayPanel()
@@ -410,11 +409,13 @@ var ToolWidget = function( tool ){
             }
             form.add( labelPanel );
         }
-
+    
         var input;
 
         if( arg.type === "file" ){
             input = new UI.File();
+            var fileInput = input.dom;
+            fileInput.addEventListener( 'change', fileInputOnChange, false );
         }else if( hidden ){
             input = new UI.Hidden();
         }else if( arg.type === "str" ){
@@ -433,6 +434,18 @@ var ToolWidget = function( tool ){
             if( arg.step ) input.setStep( arg.step );
         }else if( arg.type === "sele" ){
             input = new UI.Input();
+            
+            //stage.signals.onPicking.add( function( d){
+            //    if (input.dom.name=="res1"&input.dom.value=="") {
+            //        input.setValue (d.atom.qualifiedName());
+            //    }
+            //    else if (input.dom.name=="res2") {
+            //        input.setValue (d.atom.qualifiedName());
+            //        
+            //    }
+            //    console.log( input.dom.value)             
+            //} );
+
         }else if( arg.type === "float" ){
             input = new UI.Number();
             if( arg.range ) input.setRange( arg.range[ 0 ], arg.range[ 1 ] );
@@ -451,14 +464,19 @@ var ToolWidget = function( tool ){
 
         form.add( input );
 
+            
         if( !hidden ){
             form.add(
                 new UI.Break(),
                 new UI.Break()
             );
         }
-
+    
+   
     } );
+    
+    //};
+    
 
     // submit
 
@@ -470,7 +488,11 @@ var ToolWidget = function( tool ){
     return container;
 
 };
-
+    function fileInputOnChange( e ){
+        var file = e.target.files[ 0 ];
+        stage.loadFile( file,  { defaultRepresentation: true } );
+  
+    }
 
 var JobWidget = function( job ){
 
