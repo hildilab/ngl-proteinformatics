@@ -20,33 +20,39 @@
     <table><tbody>
     <tr>
 	<td ><img src="pictures/website_overview_inlay.png"  alt="logo"></td>
-        <td > <h3>Start</h3><br><a>The SuperLooper2 start display has to different panel. In the upper left corner the general controls for the NGL-viewer are located 
-On the right panel are the SuperLooper2 controls. Here new jobs can be started, a example can be displayed or existing results can be visualized. <br>  </a></td>
+        <td > <h3>Start</h3><br><a>
+		The SuperLooper2 start display has two different panels. In the upper left corner are the general
+		controls for the NGL viewer located in dropdown menues. The right panel contains the SuperLooper2
+		controls, including the opportunity to start new jobs, to display an example or to visualize
+		previously calculated and downloaded results. <br>  </a></td>
         
     </tr>   
     <tr>    
         <td><img src="pictures/new_job.png"  alt="logo"></td>
-       <td><h3>New job</h3> <a>To start a SuperLooper2 job the proteinstructure has to be uploaded and the two stem residues as well as the sequence of the missing segment has to be specified. A fragment search takes 20-30 seconds. Afterwards the results
-       are displayed.</a></td>
+       <td><h3>New job</h3> <a>
+	   Input requirements for a SuperLooper2 job are a protein structure containing the missing segments,
+	   two stem residues defining the position of the loop and the amino acids sequence of the missing
+	   segment. A fragment search has a runtime of up to 30 seconds and displays afterwards 
+	   the results automatically.</a></td>
     </tr>
     <tr>
         <td><img src="pictures/result_table.png" alt="logo"></td>
-        <td><h3>Results</h3> <a>After the search has finished the results are displayed in th NGL-Viewer and additional information for
-        each loop is provided in a table at the right panel.<br>
-        For each loop the ID, the score, the PDB ID of the Template, a clash score,
-        the sequence of the loop the sequence identity to the user provided sequence
-        and the location of the loop in the template structure are listed.
-        Each looop can be downloaded inserted in the user provided protein by clicking the download symbol
-        at each loop.<br>
-        The loop can be colored according to their score, sequence idetity or or clash score by selecting the corresponding color scheme
-        from the dropdown menue.<br>
-        The found loops can be displayed at once to analyze the conformational space that is covered by the found loops.<br>
-        All found loops can be downloaded for a further external analysis.
-        
-        
-        
-        
-        
+        <td><h3>Results</h3> <a>
+		Subsequent to finishing the search, the results are displayed in the NGL viewer and the loops with 
+		additional informations are provided in a table at the right panel.<br>
+        For each loop its ID, score, clash score and further informations about the template like its PDB ID,
+        sequence, the sequence identity of the template compaired to the user-defined input sequence and
+		the position of the loop in the template structure are listed. 
+		Each structure including the resulting loop
+		can be downloaded individually by clicking the download symbol at each result.
+		In addition, all found loops are downloadable for a further external analysis.<br>
+		By selecting a result, the loop inserted into the protein is displayed. 
+		The found loops can all be displayed at the same time to analyze the conformational space
+		that is covered by all found loops.<br>
+        The loop can be colored according to its score, sequence identity or clash
+		score by selecting the corresponding color scheme
+        from the dropdown menue. Additionally, the representation of the structure and
+		the loop (collapsed underneath the result table) can be changed as explained in the documentation of the NGL viewer.<br>        
         </a></td>
      </tr>
     
