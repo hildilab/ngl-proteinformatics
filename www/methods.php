@@ -16,11 +16,11 @@
         <h2>Database</h2>
         <p>To construct the database all overlapping fragments with a
         length of 3 to 35 were extracted from a collection of about
-        90.000 protein structures deposited in the PDB until June 2013.
+        100.000 protein structures currently deposited in the PDB.
         For each fragment the following informations are stored in the
         database: Sequence, PDB identifier, location in the protein
         and a geometrical fingerprint that characterizes each fragment.
-        The total number of fragments sum up to almost 700 million.
+        The total number of fragments sum up to over 700 million.
 		The number of available fragments is decreasing with increasing
         number of residues. This is caused by the fact that a smaller
         number of long fragments can be extracted from a structure, i.e.

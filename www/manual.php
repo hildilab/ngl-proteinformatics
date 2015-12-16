@@ -22,7 +22,7 @@
 	<td ><img src="pictures/website_overview_inlay.png"  alt="logo"></td>
         <td > <h3>Start</h3><br><a>
 		The SuperLooper2 start display has two different panels. In the upper left corner are the general
-		controls for the NGL viewer located in dropdown menues. The right panel contains the SuperLooper2
+		controls for the NGL viewer located in dropdown menus. The right panel contains the SuperLooper2
 		controls, including the opportunity to start new jobs, to display an example or to visualize
 		previously calculated and downloaded results. <br>  </a></td>
         
@@ -30,7 +30,7 @@
     <tr>    
         <td><img src="pictures/new_job.png"  alt="logo"></td>
        <td><h3>New job</h3> <a>
-	   Input requirements for a SuperLooper2 job are a protein structure containing the missing segments,
+	   Input requirements for a SuperLooper2 job are a protein structure with missing segments,
 	   two stem residues defining the position of the loop and the amino acids sequence of the missing
 	   segment. A fragment search has a runtime of up to 30 seconds and displays afterwards 
 	   the results automatically.</a></td>
@@ -51,7 +51,7 @@
 		that is covered by all found loops.<br>
         The loop can be colored according to its score, sequence identity or clash
 		score by selecting the corresponding color scheme
-        from the dropdown menue. Additionally, the representation of the structure and
+        from the dropdown menu. Additionally, the representation of the structure and
 		the loop (collapsed underneath the result table) can be changed as explained in the documentation of the NGL viewer.<br>        
         </a></td>
      </tr>

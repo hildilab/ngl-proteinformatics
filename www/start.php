@@ -24,9 +24,9 @@
            SuperLooper2 is an interactive web service for the insertion of missing loops
            in proteins. Loop candidates are selected from a pre-calculated database containing ~700
            million fragments with up to a length of 35 residues. The fragments were extracted
-           from known(crystal & model?) structures deposited in the RSCB PDB.
+           from known structures deposited in the RSCB PDB.
            <h3>Visualization</h3>
-           The integration of the NGL viewer (ref) for visualization allows an interactive selection of a most
+           The integration of the NGL viewer for visualization allows an interactive selection of a most
            fitting loop. Up to 50 suitable loop candidates can be interactively and visually inspected. 
            Coloring by criteria like clashes or sequence identity provides the user additional
            informations to allow an individual choice of the most suitable loop.
