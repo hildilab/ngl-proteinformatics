@@ -341,9 +341,10 @@ var ToolWidget = function( tool ){
 
     var form = new UI.Form();
     var submit = new UI.Button( "submit" );
+    var clear = new UI.Button( "clear stems" );
 
     container.add(
-        form, submit
+        form, submit, clear
     );
         // help
 
@@ -435,26 +436,22 @@ var ToolWidget = function( tool ){
         }else if( arg.type === "sele" ){
             input = new UI.Input();
             
-            //stage.signals.onPicking.add( function( d){
-            //    if (input.dom.name==="res1"&&input.dom.value==="") {
-            //        console.log("1"+input.dom.name)
-            //        input.setValue ( d.atom.qualifiedName() );
-            //        //return;
-            //        document.getElementById("res1").value = "Johnny Bravo";
-            //        //break function;
-            //        }      
-            //    
-            //    else if (input.dom.name==="res2") {console.log("2b"+ input.dom.value)
-            //        input.setValue (d.atom.qualifiedName());
-            //        console.log("2"+ input.dom.value)
-            //    }
-            //   // var all = document.getElementsByTagName("*");
-            //    
-            //    //for (var i=150, max=200; i < max; i++) {
-            //    //    console.log(all[i])
-            //    //}
-            //     console.log("3"+ input.dom.value)            
-            //} );
+            stage.signals.onPicking.add( function( d){
+                if (input.dom.name==="res1"&&input.dom.value==="") {
+                    c=d.atom.qualifiedName("noResname");
+                    input.setValue ( c.substring(0,c.indexOf('.')));
+
+                    document.getElementById("res1").value = "Johnny Bravo";
+
+                }      
+                
+                else if (input.dom.name==="res2") {
+                    y=d.atom.qualifiedName("noResname");
+                    input.setValue (y.substring(0,y.indexOf('.')));
+                    
+                }
+          
+            } );
 
         }else if( arg.type === "float" ){
             input = new UI.Number();
@@ -471,7 +468,12 @@ var ToolWidget = function( tool ){
         }
 
         input.setName( arg.name );
-
+        //clear
+        clear.onClick( function (){
+            if( input.dom.name==="res2"||input.dom.name==="res1"){
+            input.setValue("");
+            }
+        })
         form.add( input );
 
             
