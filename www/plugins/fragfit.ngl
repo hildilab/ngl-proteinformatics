@@ -1,7 +1,6 @@
 
 
 var FragResultsPreset = function( data, params ){
-
     var structureComp = data.structureComp;
     var linkerComp = data.linkerComp;
     var linkerData = data.linkerData;
@@ -21,15 +20,35 @@ var FragResultsPreset = function( data, params ){
 
     } );
 
-    var licoriceRepr = structureComp.addRepresentation( "licorice", {
+    //var licoriceRepr = structureComp.addRepresentation( "licorice", {
+    //
+    //} );
 
-    } );
-
-    // linker
-
+    var seqid=[]
+    var score=[]
+    var clash=[]
+    var corr=[]
+    for (var i in linkerData){
+        seqid.push(linkerData[i][ isFragfit ? 7 : 6 ]);
+        score.push(linkerData[i][ isFragfit ? 2 : 1 ]);
+        clash.push(linkerData[i][ isFragfit ? 5 : 4 ]);
+        corr.push(linkerData[i][0]);
+        
+    }
+    
+    seqidmax = Math.max.apply(null,seqid);
+    seqidmin = Math.min.apply(null,seqid);
+    scoremax = Math.max.apply(null,score);
+    scoremin = Math.min.apply(null,score);
+    clashmax = Math.max.apply(null,clash);
+    clashmin = Math.min.apply(null,clash);
+    corrmax = Math.max.apply(null,corr);
+    corrmin = Math.min.apply(null,corr);
+    
+    
     var clashScheme = NGL.ColorMakerRegistry.addScheme( function( params ){
         if( !params.scale ) this.scale = "OrRd";
-        this.domain = [ 0, 20 ];
+        this.domain = [ clashmin, clashmax ];
         var clashScale = this.getScale();
         this.atomColor = function( atom ){
             var modelindex = atom.residue.chain.model.index + 1
@@ -41,7 +60,7 @@ var FragResultsPreset = function( data, params ){
 
     var seqidentScheme = NGL.ColorMakerRegistry.addScheme( function( params ){
         if( !params.scale ) this.scale = "Greens";
-        this.domain = [ 0, 100 ];
+        this.domain = [ seqidmin,  seqidmax ];
         var seqidentScale = this.getScale();
         this.atomColor = function( atom ){
             var modelindex = atom.residue.chain.model.index + 1
@@ -52,7 +71,7 @@ var FragResultsPreset = function( data, params ){
 
     var scoreScheme = NGL.ColorMakerRegistry.addScheme( function( params ){
         if( !params.scale ) this.scale = "PuBuGn";
-        this.domain = [ 0, 0.3 ];
+        this.domain = [ scoremin, scoremax];
         var scoreScale = this.getScale();
         this.atomColor = function( atom ){
             var modelindex = atom.residue.chain.model.index + 1
@@ -63,7 +82,7 @@ var FragResultsPreset = function( data, params ){
 
     var correlationScheme = NGL.ColorMakerRegistry.addScheme( function( params ){
         if( !params.scale ) this.scale = "YlGnBu";
-        this.domain = [ 0, 0.5 ];
+        this.domain = [ corrmin, corrmax ];
         var correlationScale = this.getScale();
         this.atomColor = function( atom ){
             var modelindex = atom.residue.chain.model.index + 1
@@ -81,8 +100,8 @@ var FragResultsPreset = function( data, params ){
         return options;
     }
 
-    var backboneRepr = linkerComp.addRepresentation( "backbone", {
-        radius: 0.25,
+    var cartoon2Repr = linkerComp.addRepresentation( "cartoon", {
+        radius: 0.18,
         colorScheme: isFragfit ? correlationScheme : scoreScheme
     } );
 
@@ -130,8 +149,9 @@ var FragResultsPreset = function( data, params ){
 
     };
 
-    this.backboneRepr = backboneRepr;
+   // this.backboneRepr = backboneRepr;
     this.surfaceRepr = surfaceRepr;
+    this.cartoon2Repr = cartoon2Repr;
 
     this.dispose = function(){
         // TODO remove color schemes
@@ -252,7 +272,7 @@ var FragResultsWidget = function( data ){
 
     var showAllBtn = new UI.Button( "show all" )
         .onClick( function(){
-            fragResultsPreset.backboneRepr.setSelection( "*" );
+            fragResultsPreset.cartoon2Repr.setSelection( "*" );
             virtualTable.selectRow();
         } );
 
@@ -418,9 +438,12 @@ var FragResultsWidget = function( data ){
 
     function selectLinker( index ){
         if( index !== undefined ){
-            fragResultsPreset.backboneRepr.setSelection(
+            fragResultsPreset.cartoon2Repr.setSelection(
                 "/" + ( linkerItems[ index ][ 0 ] - 1 )
             );
+          //fragResultsPreset.cartoon2Repr.setSelection(
+          //      "Pro and /" + ( linkerItems[ index ][ 0 ] - 1 )
+          //  );   
         }
     }
 
@@ -486,7 +509,13 @@ var FragResultsWidget = function( data ){
             name: "Sequence",
             index: isFragfit ? 4 : 3,
             align: "left",
-            width: linkerItems[ 0 ][ isFragfit ? 4 : 3 ].length * 10
+            width: linkerItems[ 0 ][ isFragfit ? 4 : 3 ].length * 10,
+            format: function( value ){
+                if (value.indexOf("G"||"P")!=-1){ return new UI.Html( "<u>" + value + "</u>" ); }
+                else{
+                return new UI.Html(value );;
+            }
+                }
         },
         {
             name: "Sequence Identity",
@@ -551,7 +580,7 @@ var FragResultsWidget = function( data ){
     var linkercolorSelect = new UI.Select()
         .setOptions( colorOptions )
         .onChange( function(){
-            fragResultsPreset.backboneRepr.setParameters( {
+            fragResultsPreset.cartoon2Repr.setParameters( {
                 colorScheme:linkercolorSelect.getValue()
             } )
         } );
@@ -937,7 +966,7 @@ function fragsearchResultsLoader(){
 
 function fragsearchJob(){
 
-    panel.setName( "FragSearch Job" );
+    panel.setName( "SL2-Job" );
 
     var server = new Server( window.location.origin + "/job/" );
 
@@ -951,7 +980,7 @@ function fragsearchJob(){
 
 function fragsearchExample(){
 
-    panel.setName( "FragSearch Example" );
+    panel.setName( "SL2 Example" );
 
     var files = {
         structurePdb: "data://3dqb.pdb",
@@ -976,17 +1005,17 @@ function fragsearchExample(){
 
 function fragsearchStage(){
 
-    panel.setName( "FragSearch Stage" );
+    panel.setName( "SuperLooper2" );
 
     var description = new UI.Panel().add(
-        new UI.Html( "FragSearch description ..." )
+        new UI.Html( "Start a new Sl2 job or load an example" )
     );
 
     var newJobBtn = new UI.Button( "New Job" )
-        .onClick( makePluginLoader( "fragsearch-job" ) );
+        .onClick( makePluginLoader( "new-sl2-job" ) );
 
     var exampleBtn = new UI.Button( "Load Example" )
-        .onClick( makePluginLoader( "fragsearch-example" ) );
+        .onClick( makePluginLoader( "sl2-example" ) );
 
     var loaderBtn = new UI.Button( "Results Loader" )
         .onClick( makePluginLoader( "fragsearch-loader" ) );
@@ -994,8 +1023,8 @@ function fragsearchStage(){
     panel.add(
         description,
         new UI.Panel().add( newJobBtn ),
-        new UI.Panel().add( exampleBtn ),
-        new UI.Panel().add( loaderBtn )
+        new UI.Panel().add( exampleBtn )
+        //new UI.Panel().add( loaderBtn )
     );
 
 }

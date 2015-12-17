@@ -436,14 +436,24 @@ var ToolWidget = function( tool ){
             input = new UI.Input();
             
             //stage.signals.onPicking.add( function( d){
-            //    if (input.dom.name=="res1"&input.dom.value=="") {
+            //    if (input.dom.name==="res1"&&input.dom.value==="") {
+            //        console.log("1"+input.dom.name)
+            //        input.setValue ( d.atom.qualifiedName() );
+            //        //return;
+            //        document.getElementById("res1").value = "Johnny Bravo";
+            //        //break function;
+            //        }      
+            //    
+            //    else if (input.dom.name==="res2") {console.log("2b"+ input.dom.value)
             //        input.setValue (d.atom.qualifiedName());
+            //        console.log("2"+ input.dom.value)
             //    }
-            //    else if (input.dom.name=="res2") {
-            //        input.setValue (d.atom.qualifiedName());
-            //        
-            //    }
-            //    console.log( input.dom.value)             
+            //   // var all = document.getElementsByTagName("*");
+            //    
+            //    //for (var i=150, max=200; i < max; i++) {
+            //    //    console.log(all[i])
+            //    //}
+            //     console.log("3"+ input.dom.value)            
             //} );
 
         }else if( arg.type === "float" ){
