@@ -21,18 +21,25 @@
 	  <p>
 	    
 	  </p><h3>An interactive tool for prediction, visualization and selection of missing segments in proteins</h3>
-           SuperLooper2 is an interactive web service for the insertion of missing loops
-           in proteins. Loop candidates are selected from a pre-calculated database containing ~700
-           million fragments with up to a length of 35 residues. The fragments were extracted
-           from known structures deposited in the RSCB PDB.
+	  
+           SuperLooper2 is an interactive web service for the insertion
+	   of missing segments such as loops in proteins. Loop candidates
+	   are selected from a pre-calculated database containing ~700 million
+	   protein fragments with of 3-35 residues length. The fragments are
+	   extracted from structural coordinates  deposited in the RSCB PDB.
+	   
            <h3>Visualization</h3>
-           The integration of the NGL viewer for visualization allows an interactive selection of a most
-           fitting loop. Up to 50 suitable loop candidates can be interactively and visually inspected. 
-           Coloring by criteria like clashes or sequence identity provides the user additional
-           informations to allow an individual choice of the most suitable loop.
+           Integration of the NGL viewer, a molecular viewer based on WebGL,
+	   allows visualization and interactive selection of a loop from a
+	   list of 50 suitable candidates. A color code is provided to
+	   indicate clashes or  other relevant criteria to promote an
+	   individual choice of the most suitable loop.
+	   
            <h3>Results</h3>
-           The selected loop can be downloaded separately or included into the protein.
-           In addition, all 50 loop candidates can be downloaded (in a combined pdb file or separated) for the purpose of further analyses.
+           A selected loop can be downloaded separately or inserted into
+	   the protein. In addition, all 50 loop candidates can be downloaded
+	   for further analyses. 
+
         </div>
     </div>
    </div>

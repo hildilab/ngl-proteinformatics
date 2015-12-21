@@ -103,6 +103,7 @@ var FragResultsPreset = function( data, params ){
     var cartoon2Repr = linkerComp.addRepresentation( "cartoon", {
         radius: 0.18,
         colorScheme: isFragfit ? correlationScheme : scoreScheme
+   
     } );
 
     linkerComp.centerView();
@@ -845,7 +846,7 @@ var FragJobWidget = function( server, isFragfit ){
             files.mapMrc = baseUrl + "input_mrc_file.mrc";
             files.linkerPdb = baseUrl + "loop_correl/ori_pdb_linker_file3.pdb";
         }else{
-            files.linkerPdb = baseUrl + "input_pdb_file_linker3.pdb";
+            files.linkerPdb = baseUrl + "input_pdb_file_linker2.pdb";
         }
 
         function init( widget ){
