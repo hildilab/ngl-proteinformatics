@@ -40,9 +40,19 @@
     <tr>
         <td><img src="pictures/result_table_h.png" alt="logo"></td>
         <td><h3>Results</h3> <a>
-		The top candidate loop is automatically displayed in the NGL viewer together with the uploaded protein (model). Other loops can be selected from the list of 50 candidates by visualization or by using the information provided in the table at the right panel for guidance. This table includes the following information for each candidate loop: an ID (?), a score (?), a clash score, the PDB ID and the position of the fragment in the template protein, and a comparison of the user-defined input sequence with the template sequence (sequence similarity). 
-By selecting a result, the loop is displayed together with the uploaded protein. The complete list of loop candidates can be displayed simultaneously to visualize the conformational space of the loop. The loop can be colored according to its score, sequence identity or clash score by selecting the corresponding color scheme from the dropdown menu. Additionally, the representation of the structure and the loop (collapsed underneath the result table) can be changed as explained in the separate documentation of the NGL viewer. 
-The completed structure (initial model plus selected loop) can be downloaded by clicking the download symbol. Alternatively, the complete list of loops can be downloaded for a further analysis.       
+		The top candidate loop is automatically displayed in the NGL viewer together with the uploaded protein (model).
+		Other loops can be selected from the list of 50 candidates by visualization or by using the information
+		provided in the table at the right panel for guidance. This table includes the following information for
+		each candidate loop: an ID , a score , a clash score, the PDB ID and the position of the fragment in the
+		template protein, and a comparison of the user-defined input sequence with the template sequence (sequence similarity).
+		Sequences that are underlined contain prolynes or glycins.
+		<br>
+By selecting a result, the loop is displayed together with the uploaded protein. The complete list of loop candidates can be displayed
+simultaneously to visualize the conformational space of the loop. The loop can be colored according to its score, sequence identity or
+clash score by selecting the corresponding color scheme from the dropdown menu. Additionally, the representation of the structure and
+the loop (collapsed underneath the result table) can be changed as explained in the separate documentation of the NGL viewer. 
+The completed structure (initial model plus selected loop) can be downloaded by clicking the download symbol. Alternatively, the complete
+list of loops can be downloaded for a further analysis.       
         </a></td>
      </tr>
     

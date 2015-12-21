@@ -16,7 +16,7 @@
         <h2>Methods and Datasets</h2>
         Hildebrand,P.W. et al. (2009) SuperLooper--a prediction server for the modeling of loops in globular and membrane proteins. Nucleic Acids Res.,<b> 37</b>, W571&#151;4.<br><br>
         Michalsky,E. et al. (2003) Loops In Proteins (LIP)--a comprehensive loop database for homology modelling. Protein Eng., <b>16</b>, 979&#151;85.<br><br>
-        Fiser, a. and Sali,A. (2003) ModLoop: automated modeling of loops in protein structures. Bioinformatics, <b>19</b>, 2500&#151;2501.<br><br>
+        Fiser, A. and Sali,A. (2003) ModLoop: automated modeling of loops in protein structures. Bioinformatics, <b>19</b>, 2500&#151;2501.<br><br>
         Rose,P.W. et al. (2013) The RCSB Protein Data Bank: new resources for research and education. Nucleic Acids Res., <b> 41</b>, D475&#151;82.<br><br>
         Rossi,K.A. et al. (2007) Loopholes and missing links in protein modeling. Protein Sci.,<b> 16</b>, 1999&#151;2012.<br><br>
         <h2>Visualization</h2>
