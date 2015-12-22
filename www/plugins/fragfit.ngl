@@ -17,12 +17,12 @@ var FragResultsPreset = function( data, params ){
     // structure
 
     var cartoonRepr = structureComp.addRepresentation( "cartoon", {
-
+    
     } );
 
-    //var licoriceRepr = structureComp.addRepresentation( "licorice", {
+    // var licoriceRepr = structureComp.addRepresentation( "licorice", {
     //
-    //} );
+    // } );
 
     var seqid=[]
     var score=[]
@@ -777,13 +777,14 @@ var FragJobWidget = function( server, isFragfit ){
     tool.signals.jobSubmitted.add( function( job ){
 
         results.clear();
+       
 
         if( job === "ERROR" ){
             results.add(
                 new UI.Text( "ERROR submitting job" )
             );
         }else{
-            toolWidget.setDisplay( "none" );
+           // toolWidget.setDisplay( "none" );
             job.signals.statusChanged.add( function(){
                 updateStatus( job )
             } );
@@ -792,7 +793,6 @@ var FragJobWidget = function( server, isFragfit ){
     } );
 
     var toolWidget = new ToolWidget( tool );
-
     // status
 
     var status = new UI.Panel()
@@ -865,6 +865,7 @@ var FragJobWidget = function( server, isFragfit ){
         status,
         results
     );
+    // console.log(document.getElementById('res1').value)
 
     return container;
 
