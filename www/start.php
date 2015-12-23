@@ -36,8 +36,8 @@
 	   individual choice of the most suitable loop.
 	   
            <h3>Results</h3>
-           A selected loop can be downloaded separately or inserted into
-	   the protein. In addition, all 50 loop candidates can be downloaded
+           A selected loop can be downloaded inserted into
+	   the user provided protein. In addition, all 50 loop candidates can be downloaded
 	   for further analyses. 
 
         </div>

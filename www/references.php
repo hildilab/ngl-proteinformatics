@@ -19,6 +19,7 @@
         Fiser, A. and Sali, A. (2003) ModLoop: automated modeling of loops in protein structures. Bioinformatics, <b>19</b>, 2500&#151;2501.<br><br>
         Rose, P.W. et al. (2013) The RCSB Protein Data Bank: new resources for research and education. Nucleic Acids Res., <b> 41</b>, D475&#151;82.<br><br>
         Rossi, K.A. et al. (2007) Loopholes and missing links in protein modeling. Protein Sci.,<b> 16</b>, 1999&#151;2012.<br><br>
+	Tusn&aacute;dy, G.E. et al. (2005) TMDET: web server for detecting transmembrane regions of proteins by using their 3D coordinates. Bioinformatics, <b>21</b>, 1276&#151;7.
         <h2>Visualization</h2>
         Rose, A.S. and Hildebrand, P.W. (2015) NGL Viewer: a web application for molecular visualization. Nucleic Acids Res., <b>43</b>, W576&#151;W579.
         <h2>Further reading</h2>

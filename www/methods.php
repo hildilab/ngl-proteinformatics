@@ -26,25 +26,30 @@
 	while for a fragment length of 35 this number declines to approximately 18 million.</p>
         <div align=center>
         <img src="pictures/database_both.png" width="40%" height="40%" alt="logo">
-         </div>   
+         </div>
+	
+	A second database holds fragments from helical membrane proteins. The number of helical
+	transmembrane proteins in the PDB rose from 805 to 2.298. The number of loops in the database
+	increased from 180.000 to 390.000.
+	
         <h2>Geometric fingerprint</h2>
         <p> The geometrical fingerprint matching is used to evaluate the sterical fit
 	of the stem atoms of the N- and C-termini of each database fragment to the C-
 	and N-terminal stem atoms of a gap in a protein structure. Both geometrical
 	fingerprints are composed by the distance between the N- and C-terminal stem
-	atoms and three angles defining the relative orientation of the stem atoms.The geometrical
+	atoms and three angles defining the relative orientation of the stem atoms. The geometrical
 	fingerprint is characterized by the distance d between the N-terminal C atom and the
 	C-terminal N atom and the following three angles:
          &alpha; defined by the line between C&alpha;<sup>(N)</sup>  and C<sup>(N)</sup>
          and d, &beta; is spanned by the line between N<sup>(C)</sup>  and C&alpha;<sup>(C)</sup>
-         and d,  &gamma;: the angle between the two planes A (defined by C&alpha;<sup>(N)</sup>,
+         and d,  &gamma; defines the angle between the two planes A (defined by C&alpha;<sup>(N)</sup>,
          C<sup>(N)</sup>) and N<sup>(C)</sup>) and B (C&alpha;<sup>(C)</sup>, C<sup>(N)</sup>
          and N<sup>(C)</sup>).</i> This fingerprint
         is a slight alteration of the fingerprint used in our previous publication.
         Instead of combining two distances and two angles we now use one distance
 	and three angles. Analysis of the previous fingerprint revealed that the score
-	was slightly biased towards that the residue which angle was measured. By
-	using angles on both stem residues, the resulting score does not privilege
+	was slightly biased towards the residue where angle was measured. By
+	using angles on both stem residues, the resulting score does not favor
 	the fit of the candidate fragment to one stem residue over the other any
 	more.</p>
 	
@@ -60,7 +65,7 @@
      <b>score = M - 0.1 * RMSD_stem<sup>2</sup></b><br>
      <br>
 	
-	The sequence score M is calculated using an Environment-specific amino
+	The sequence score M is calculated using an environment-specific amino
 	acid substitution matrix for accessible residues. The stem score RMSD
 	is the root mean square deviation of the stem atoms C&alpha; and C of
 	the N-terminal stem residue and N and C&alpha; of the C-terminal stem residues.
@@ -71,10 +76,10 @@
         <p>To minimize the calculation time of the fragment search a stepwise
 	approach is used. In a first step, all fragments with the defined sequence
 	length and which stem atoms matching the stem atoms of the gap with  at least
-	0.75 &Aring RMSD are selected. In the second step, the 500 top candidates are chose
-	n based on a quick estimation of the steric fit of the fragment to the rest of
+	0.75 &Aring RMSD are selected. In the second step, the 500 top candidates are chosen
+	based on a quick estimation of the steric fit of the fragment to the rest of
 	the protein e.g. excluding clashes. Subsequently, these 500 fragment are ranked
-	by a score calculated from thesequence similarity and matching of the geometrical
+	by a score calculated from the sequence similarity and matching of the geometrical
 	fingerprints of the (template) fragment and the target segment. To maximize the
 	conformational space, fragments with an identical sequence or a backbone RMSD
 	smaller than 1 &Aring are removed from the results list.</p>
