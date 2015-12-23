@@ -28,15 +28,24 @@
         
     </tr>   
     <tr>    
-        <td><img src="pictures/new_jobh.png" alt="logo"></td>
+        <td><img src="pictures/new_job.png" alt="logo"></td>
        <td><h3>New job</h3> <a>
-	   To start a new SL2 job you have to provide  a coordinate file of a protein structure
-	   in PDB format. The two stem residues flanking a missing segment or a segment that
-	   should be remodelled have to be typed in a formular or selected from the NGL
-	   visualization by mouse selection. Finally, the amino acids sequence of the missing
-	   segment has to be provided. Depening on fragment length, a fragment search may take
-	   up to 30 seconds. When the job is finished, the results are displayed automatically.</a></td>
+	   To start a new SL2 job you have to provide a coordinate file of a protein structure in PDB format.
+	   The two stem residues flanking a missing segment or a segment that should be remodeled have to be
+	   typed in a form or selected from the NGL visualization by mouse selection. To clear the stem residues
+	   from the form use the 'clear stems' button, afterwards they can be filled by mouse selection again.
+	   Finally, the amino acids sequence of the missing segment has to be provided. To search for loops only
+	   originating from membrane proteins check the MembraneDB check-box otherwise the full database will be
+	   searched. Depending on fragment length, a fragment search may take up to 30 seconds. When the job is
+	   finished, the results are displayed automatically.</a>
+       
+      <h3> Modify search</h3>
+       <a>To modify the search parameters after reviewing the results change the form and press
+       submit. The result table will be updated after the search is completed. To start a completely new job please reload the web-site. Old results will be lost. </a>
+       </td>
     </tr>
+    
+    
     <tr>
         <td><img src="pictures/result_table_h.png" alt="logo"></td>
         <td><h3>Results</h3> <a>
@@ -47,13 +56,13 @@
 		template protein, and a comparison of the user-defined input sequence with the template sequence (sequence similarity).
 		Sequences that are underlined contain prolynes or glycins.
 		<br>
-By selecting a result, the loop is displayed together with the uploaded protein. The complete list of loop candidates can be displayed
-simultaneously to visualize the conformational space of the loop. The loop can be colored according to its score, sequence identity or
-clash score by selecting the corresponding color scheme from the dropdown menu. Additionally, the representation of the structure and
-the loop (collapsed underneath the result table) can be changed as explained in the separate documentation of the NGL viewer. 
-The completed structure (initial model plus selected loop) can be downloaded by clicking the download symbol. Alternatively, the complete
-list of loops can be downloaded for a further analysis.       
-        </a></td>
+		 By selecting a result, the loop is displayed together with the uploaded protein. The complete list of loop candidates can be displayed
+		simultaneously to visualize the conformational space of the loop. The loop can be colored according to its score, sequence identity or
+		clash score by selecting the corresponding color scheme from the dropdown menu. Additionally, the representation of the structure and
+		the loop (collapsed underneath the result table) can be changed as explained in the separate documentation of the NGL viewer. 
+		The completed structure (initial model plus selected loop) can be downloaded by clicking the download symbol. Alternatively, the complete
+		list of loops can be downloaded for a further analysis.       
+			</a></td>
      </tr>
     
     </table>
