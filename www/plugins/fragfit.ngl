@@ -860,6 +860,12 @@ var FragJobWidget = function( server, isFragfit ){
 
         loadFragResults( files )
             .then( init );
+        
+        stage.eachComponent( function( comp ){
+            if( comp.name==="input_pdb_file.pdb" || comp.name==="input_pdb_file_linker2.pdb"){
+                comp.setVisibility( false )
+            }
+        });
 
     }
 
