@@ -807,6 +807,11 @@ var FragJobWidget = function( server, isFragfit ){
                 loadResults( job );
             }else{
                 toolWidget.setDisplay( "block" );
+                results.clear();
+                results.add(
+                    new UI.Text( "ERROR running job: please check the input" ),
+                    new UI.Text( "Hint: " + job.log[job.log.length-1].split("]")[1] )
+                );
             }
         }else{
             status.setDisplay( "block" );

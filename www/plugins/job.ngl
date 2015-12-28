@@ -201,6 +201,9 @@ var Job = function( name, server, params ){
             }else{
                 clearInterval( getStatusIntervalId );
                 console.log("finished")
+                // if ( !this.check ) {
+                //     console.log("error: "+this.log[ this.log.length-1 ])
+                // }
             }
 
         }.bind( this ) );
@@ -510,7 +513,7 @@ var ToolWidget = function( tool ){
    
     } );
     
-    //};
+    // };
     
 
     // submit
@@ -522,7 +525,7 @@ var ToolWidget = function( tool ){
         //for (var key in form.dom) {
         //var value = form.dom[key];
         //console.log ("key"+ key,"value"+value)
-            //}
+            // }
             
     } );
 
