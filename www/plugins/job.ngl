@@ -1,3 +1,30 @@
+var AA1 = {
+    'HIS': 'H',
+    'ARG': 'R',
+    'LYS': 'K',
+    'ILE': 'I',
+    'PHE': 'F',
+    'LEU': 'L',
+    'TRP': 'W',
+    'ALA': 'A',
+    'MET': 'M',
+    'PRO': 'P',
+    'CYS': 'C',
+    'ASN': 'N',
+    'VAL': 'V',
+    'GLY': 'G',
+    'SER': 'S',
+    'GLN': 'Q',
+    'TYR': 'Y',
+    'ASP': 'D',
+    'GLU': 'E',
+    'THR': 'T',
+    'ASH': 'D',
+    'GLH': 'E',
+    'UNK': '',
+};
+
+
 
 var Server = function( url, params ){
 
@@ -385,7 +412,7 @@ var ToolWidget = function( tool ){
     };
 
     // form
-    var inputres;
+    var inputres = {};
     var flag = "res1";
 
     tool.args.forEach( function( arg ){
@@ -442,20 +469,19 @@ var ToolWidget = function( tool ){
             if( arg.range ) input.setRange( arg.range[ 0 ], arg.range[ 1 ] );
             if( arg.step ) input.setStep( arg.step );
         }else if( arg.type === "sele" ){
-            inputres = new UI.Input();
             input = new UI.Input();
-            inputres.setName( arg.name );
+            inputres[arg.name] = UI.Input();
             stage.signals.onPicking.add( function( d){
                 if (arg.name==="res1" && flag==="res1"){
                     c=d.atom.qualifiedName("noResname");
                     input.setValue ( c.substring(0,c.indexOf('.')));
                     input.setName( arg.name )
-                    inputres["res1"] = c.substring(0,c.indexOf('.'));
+                    inputres[arg.name] = c.substring(0,c.indexOf('.'));
                     flag="res1a";
                 }else if (arg.name==="res2" && flag==="res2") {
                     y=d.atom.qualifiedName("noResname");
                     input.setValue (y.substring(0,y.indexOf('.')));
-                    inputres["res2"] =  y.substring(0,y.indexOf('.'));
+                    inputres[arg.name] =  y.substring(0,y.indexOf('.'));
                     flag="res1"
                 }else flag="res2"
             } );
@@ -496,14 +522,45 @@ var ToolWidget = function( tool ){
                     input.setValue( resid2.toString() + ":" + chain2[chain2.length-1] );
                     inputres["res2"] = resid2.toString() + ":" + chain2[chain2.length-1];
                 }else if (arg.name==="seq") {
-                    input.setValue( "X" + input.getValue("seq") );
+                    stage.eachComponent(function(comp){
+                        if (comp.name===inputres.file_input) {
+                            comp.structure.eachChain(function(chain){
+                                if (chain.chainname === chain2[chain2.length-1]) {
+                                    for (resi in chain.residues) {
+                                        if (chain.residues[resi].resno===resid2+2) {
+                                            var resnam = chain.residues[resi].resname
+                                            console.log(resnam + AA1[resnam] + (resid2+2).toString() + chain.chainname )
+                                            input.setValue( AA1[resnam] + input.getValue("seq") );
+                                        }
+                                    }
+                                }
+                                
+                            });
+                        }
+                    });
                 }
             }else if ( resid1 <= resid2 ) {
                 if (arg.name==="res1") {
                     input.setValue( resid1.toString() + ":" + chain1[chain1.length-1] );
                     inputres["res1"] = resid1.toString() + ":" + chain1[chain1.length-1];
                 }else if (arg.name==="seq") {
-                    input.setValue( "X" + input.getValue("seq") );
+                    stage.eachComponent(function(comp){
+                        if (comp.name===inputres.file_input) {
+                            comp.structure.eachChain(function(chain){
+                                if (chain.chainname === chain1[chain1.length-1]) {
+                                    for (resi in chain.residues) {
+                                        if (chain.residues[resi].resno===(resid1+2)) {
+                                            var resnam = chain.residues[resi].resname
+                                            console.log(resnam + AA1[resnam] + (resid1+2).toString() + chain.chainname )
+                                            input.setValue( AA1[resnam] + input.getValue("seq") );
+                                        }
+                                    }
+
+                                }
+                                
+                            });
+                        }
+                    });
                 }
             }
         });
@@ -521,14 +578,40 @@ var ToolWidget = function( tool ){
                     input.setValue( resid2.toString() + ":" + chain2[chain2.length-1] );
                     inputres["res2"] = resid2.toString() + ":" + chain2[chain2.length-1];
                 }else if (arg.name==="seq") {
-                    input.setValue( input.getValue("seq") + "X");
+                    stage.eachComponent(function(comp){
+                        if (comp.name===inputres.file_input) {
+                            comp.structure.eachChain(function(chain){
+                                if (chain.chainname === chain2[chain2.length-1]) {
+                                    for (resi in chain.residues) {
+                                        if (chain.residues[resi].resno===resid2-2) {
+                                            var resnam = chain.residues[resi].resname
+                                            input.setValue( input.getValue("seq") + AA1[resnam] );
+                                        }
+                                    }
+                                }
+                            });
+                        }
+                    });
                 }
             }else if ( resid1 > resid2 ) {
                 if (arg.name==="res1") {
                     input.setValue( resid1.toString() + ":" + chain1[chain1.length-1] );
                     inputres["res1"] = resid1.toString() + ":" + chain1[chain1.length-1];
                 }else if (arg.name==="seq") {
-                    input.setValue( input.getValue("seq") + "X" );
+                    stage.eachComponent(function(comp){
+                        if (comp.name===inputres.file_input) {
+                            comp.structure.eachChain(function(chain){
+                                if (chain.chainname === chain1[chain1.length-1]) {
+                                    for (resi in chain.residues) {
+                                        if (chain.residues[resi].resno===(resid1-2)) {
+                                            var resnam = chain.residues[resi].resname
+                                            input.setValue( input.getValue("seq") + AA1[resnam] );
+                                        }
+                                    }
+                                }
+                            });
+                        }
+                    });
                 }
             }
         });
@@ -562,15 +645,16 @@ var ToolWidget = function( tool ){
             // }
             
     } );
-
-    return container;
-
-};
+    
     function fileInputOnChange( e ){
         var file = e.target.files[ 0 ];
         stage.loadFile( file,  { defaultRepresentation: true } );
-  
+        inputres["file_input"] = file.name;
     }
+    return container;
+
+};
+
 
 var JobWidget = function( job ){
 
