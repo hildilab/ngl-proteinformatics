@@ -791,8 +791,139 @@ var FragJobWidget = function( server, isFragfit ){
         }
 
     } );
+    var toolWidgetAll = new ToolWidget( tool );
+    console.log('rrr'+toolWidgetAll)
+    console.log(toolWidgetAll)
+    var toolWidget = toolWidgetAll.returncontent()[0]
+    var toolWidgetres = toolWidgetAll.returncontent()[1]
+    console.log(toolWidgetres)
+    toolWidget.onChange( function(){
+        console.log('fjlfffff2345ss'+toolWidgetres["res1"])
+        console.log('jka'+toolWidgetAll.inputres["res1"].dom)
+    } );
+    var flag2 = "res1";
 
-    var toolWidget = new ToolWidget( tool );
+    var clear = new UI.Button( "clear input fields" );
+    var extendn = new UI.Button( "extend n-term" );
+    var extendc = new UI.Button( "extend c-term" );
+    toolWidgetAll.container.add(clear, new UI.Break(), extendn, extendc);
+    
+    
+    //clear
+    clear.onClick( function (){
+        var inputvals = ["res1", "res2", "seq"]
+        console.log(inputvals)
+        for( var i in inputvals ) {
+            toolWidgetAll.form.dom.children[inputvals[i]].value = "";
+            toolWidgetAll.inputres[inputvals[i]] = "";
+        }
+    });
+    
+    //extend n-term
+    extendn.onClick ( function (){
+        var inputval2 = toolWidgetAll.inputres.res2;
+        var resid2 = parseInt( inputval2.substring(0,inputval2.indexOf(':')) )-1;
+        var chain2 = inputval2.split( ':' );
+        var inputval1 = toolWidgetAll.inputres.res1;
+        var resid1 = parseInt( inputval1.substring(0,inputval1.indexOf(':')) )-1;
+        var chain1 = inputval1.split( ':' );
+        if( resid2 < resid1 ) {
+            toolWidgetAll.inputres.res2 = resid2.toString() + ":" + chain2[chain2.length-1]
+            toolWidgetAll.form.dom.children["res2"].value = resid2.toString() + ":" + chain2[chain2.length-1];
+            stage.eachComponent(function(comp){
+                if( comp.name === toolWidgetAll.inputres.file_input ) {
+                    var selection = new NGL.Selection( (resid2+1).toString() +":"+chain2[chain2.length-1] );
+                    var atom = comp.structure.getAtoms( selection, true );
+                    toolWidgetAll.inputres.seq = NGL.AA1[atom.resname] + toolWidgetAll.form.dom.children['seq'].value;
+                    toolWidgetAll.form.dom.children['seq'].value = NGL.AA1[atom.resname] + toolWidgetAll.form.dom.children['seq'].value;
+                    // console.log( atom.resname + atom.resno + NGL.AA1[atom.resname] + (resid2+1).toString() );
+                }
+            });
+        }else if( resid1 <= resid2 ) {
+            toolWidgetAll.inputres.res1 = resid1.toString() + ":" + chain1[chain1.length-1];
+            toolWidgetAll.form.dom.children["res1"].value = resid1.toString() + ":" + chain1[chain1.length-1];
+            stage.eachComponent( function(comp){
+                if( comp.name === toolWidgetAll.inputres.file_input ) {
+                    var selection = new NGL.Selection( (resid2+1).toString() +":"+chain2[chain2.length-1] );
+                    var atom = comp.structure.getAtoms( selection, true );
+                    toolWidgetAll.inputres.seq = NGL.AA1[atom.resname] + toolWidgetAll.form.dom.children['seq'].value;
+                    toolWidgetAll.form.dom.children['seq'].value = NGL.AA1[atom.resname] + toolWidgetAll.form.dom.children['seq'].value;
+                    // console.log( atom.resname + atom.resno + NGL.AA1[atom.resname] + (resid1+1).toString() );
+                }
+            } );
+        }
+    });
+    // extend c-term
+    extendc.onClick ( function (){
+        var inputval2 = toolWidgetAll.inputres.res2;
+        var resid2 = parseInt(inputval2.substring(0,inputval2.indexOf(':')))+1;
+        var chain2 = inputval2.split(':');
+        var inputval1 = toolWidgetAll.inputres.res1;
+        var resid1 = parseInt(inputval1.substring(0,inputval1.indexOf(':')))+1;
+        var chain1 = inputval1.split(':');
+        if( resid2 >= resid1 ) {
+            toolWidgetAll.inputres.res2 = resid2.toString() + ":" + chain2[chain2.length-1];
+            toolWidgetAll.form.dom.children["res2"].value = resid2.toString() + ":" + chain2[chain2.length-1];
+            stage.eachComponent(function(comp){
+                if( comp.name === toolWidgetAll.inputres.file_input ) {
+                    var selection = new NGL.Selection( (resid2-1).toString() +":"+chain2[chain2.length-1] );
+                    var atom = comp.structure.getAtoms( selection, true );
+                    toolWidgetAll.inputres.seq = toolWidgetAll.form.dom.children['seq'].value + NGL.AA1[atom.resname];
+                    toolWidgetAll.form.dom.children['seq'].value = toolWidgetAll.form.dom.children['seq'].value + NGL.AA1[atom.resname];
+                    // console.log( atom.resname + atom.resno + NGL.AA1[atom.resname] + (resid2-1).toString() );
+                }
+            });
+        }else if( resid1 > resid2 ) {
+            toolWidgetAll.inputres.res1 = resid1.toString() + ":" + chain1[chain1.length-1];
+            toolWidgetAll.form.dom.children["res1"].value = resid1.toString() + ":" + chain1[chain1.length-1];
+            stage.eachComponent(function(comp){
+                if( comp.name===toolWidgetAll.inputres.file_input ) {
+                    var selection = new NGL.Selection( (resid1-1).toString() +":"+chain1[chain1.length-1] );
+                    var atom = comp.structure.getAtoms( selection, true );
+                    toolWidgetAll.inputres.seq = toolWidgetAll.form.dom.children['seq'].value + NGL.AA1[atom.resname];
+                    toolWidgetAll.form.dom.children['seq'].value = toolWidgetAll.form.dom.children['seq'].value + NGL.AA1[atom.resname];
+                    // console.log( atom.resname + atom.resno + NGL.AA1[atom.resname] + (resid1-1).toString() );
+                }
+            });
+        }
+    });
+
+    
+    stage.signals.onPicking.add( function( d){
+        tool.args.forEach( function( arg ){
+            //console.log('rrr'+toolWidgetAll.inputres)
+            //console.log('s'+toolWidgetAll.container.children)
+            if (arg.name==="res1" && flag2==="res1"){
+                c=d.atom.qualifiedName("noResname");
+                //toolWidgetAll.input.setValue ( c.substring(0,c.indexOf('.')));
+                toolWidgetAll.form.dom.children['res1'].value = c.substring(0,c.indexOf('.'));
+                toolWidgetAll.inputres.res1 = c.substring(0,c.indexOf('.'));
+                //toolWidgetAll.input = new UI.Input();
+                //toolWidgetAll.input.setName( arg.name )
+                //console.log('ha'+toolWidgetAll.input)
+                //console.log('jo'+toolWidgetAll.form.dom[1].name)
+                //console.log('jo'+toolWidgetAll.form.dom.children['res1'].value)
+                //for (elem in toolWidgetAll.form.dom.children) {
+                //    console.log(elem)
+                //}
+                ////inputres[arg.name] = c.substring(0,c.indexOf('.'));
+                flag2="res1a";
+                //console.log(toolWidgetAll.inputres)
+                //console.log(toolWidget.dom.childNodes[0][1])
+                //console.log(toolWidget.dom.name)
+                //toolWidgetAll.form.add(toolWidgetAll.inputres["res1"])
+                //toolWidget.add(toolWidgetres["res1"])
+            }else if (arg.name==="res2" && flag2==="res2") {
+                //toolWidgetAll.inputres["res2"] = new UI.Input();
+                y=d.atom.qualifiedName("noResname");
+                //toolWidgetAll.inputres["res2"].setValue (y.substring(0,y.indexOf('.')));
+                toolWidgetAll.form.dom.children['res2'].value = y.substring(0,y.indexOf('.'));
+                toolWidgetAll.inputres.res2 = y.substring(0,y.indexOf('.'));
+                //inputres[arg.name] =  y.substring(0,y.indexOf('.'));
+                flag2="res1"
+            }else if(flag2==="res1a") flag2="res2"
+        } );
+    });
     // status
 
     var status = new UI.Panel()
