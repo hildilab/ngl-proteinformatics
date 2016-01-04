@@ -793,11 +793,39 @@ var FragJobWidget = function( server, isFragfit ){
     } );
     var toolWidgetAll = new ToolWidget( tool );
     var toolWidget = toolWidgetAll.container
+    var membraneplane = new UI.Button( "calculate membrane plane" );
     var clear = new UI.Button( "clear input fields" );
     var extendn = new UI.Button( "extend n-term" );
     var extendc = new UI.Button( "extend c-term" );
-    toolWidgetAll.container.add(clear, new UI.Break(), extendn, extendc);
+    // toolWidgetAll.container.add( new UI.Break(), membraneplane, new UI.Break(), clear, new UI.Break(), extendn, extendc );
+    toolWidgetAll.container.add( clear, new UI.Break(), extendn, extendc );
 
+    //membraneplane
+    membraneplane.onClick( function (){
+        var tool2 = server.getTool(
+            "tmdet"
+        );
+        tool2.signals.jobSubmitted.add( function( job2 ){
+            job2.signals.statusChanged.add( function(){
+                if( job2.running === false ){
+                    if( job2.check === true ){
+                        var baseUrl2 = job2.urlFor( "file" ) + "/";
+                        var structurePdb2 = baseUrl2 + "input_pdb_file_tmdet.ply";
+                        var initComp2 = function( comp2 ){
+                            comp2.addRepresentation( "surface", {background: true, color: "white"});
+                            comp2.requestGuiVisibility( false );
+                            return comp2;
+                        }
+                        stage.loadFile( structurePdb2, { ext: "ply" } ).then( initComp2 )
+                    }
+                }
+            } );
+        } );
+        var data2 = new FormData( toolWidgetAll.form.dom );
+        tool2.submit( data2 );
+        
+    } );
+    
     //clear
     clear.onClick( function (){
         var inputvals = ["res1", "res2", "seq"]
