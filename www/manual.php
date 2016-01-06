@@ -45,7 +45,9 @@
 	   finished, the results are displayed automatically.</a>
        
       <h5> Modify search</h5>
-       <a>To modify the search parameters after reviewing the results change the form and press
+       <a>If no suitable loop was found a possible solution is to extend the loop search in N- or C- terminal direction.
+       To do this push one of the extension buttons. The stem residue will be changed by one into the chosen direction
+       and the search sequence will be updated automatically. To modify the search parameters manually change the form and press
        submit. The result table will be updated after the search is completed. To start a completely new job please reload the web-site. Old results will be lost. </a>
        </td>
                <td><img src="pictures/new_job.png" alt="logo"></td>
