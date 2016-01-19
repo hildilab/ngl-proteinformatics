@@ -8,32 +8,41 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 
-    <link rel="icon" href="ngl/img/favicon.ico" type="image/x-icon"/>
-    <link rel="stylesheet" href="ngl/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="ngl/css/main.css" />
-    <link rel="stylesheet" href="ngl/css/dark.css" id="theme" />
-
+    <link rel="icon" href="../ngl/img/favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="../ngl/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../ngl/css/main.css" />
+    <link rel="stylesheet" href="../ngl/css/dark.css" id="theme" />
+    <style>
+        #sidebar {
+            position: absolute;
+            right: 0px;
+            top: 32px;
+            bottom: 0px;
+            width: 500px;
+            overflow: hidden;
+        }
+    </style>
 </head>
 
 <body>
 
-    <script src="ngl/js/build/ngl.full.min.js"></script>
+    <script src="../ngl/js/build/ngl.full.min.js"></script>
 
     <!-- EXTRA -->
-    <script src="ngl/js/extra/mdsrv.js"></script>
+    <script src="../ngl/js/extra/mdsrv.js"></script>
 
     <script>
 
         if( !Detector.webgl ) Detector.addGetWebGLMessage();
 
-        NGL.mainScriptFilePath = "ngl/js/build/ngl.full.min.js";
-        NGL.cssDirectory = "ngl/css/";
-        NGL.assetsDirectory = "ngl/";
+        NGL.mainScriptFilePath = "../ngl/js/build/ngl.full.min.js";
+        NGL.cssDirectory = "../ngl/css/";
+        NGL.assetsDirectory = "../ngl/";
 
         // Datasources
 
         NGL.DatasourceRegistry.add(
-            "data", new NGL.StaticDatasource( "data/" )
+            "data", new NGL.StaticDatasource( "../data/" )
         );
        // NGL.DatasourceRegistry.add(
          //   "file", new MdsrvDatasource( window.location.origin + "/mdsrv/" )
@@ -48,9 +57,9 @@
         //NGL.PluginRegistry.add( "fragfit-job", "plugins/fragfit-job.plugin" );
         //NGL.PluginRegistry.add( "fragfit-loader", "plugins/fragfit-loader.plugin" );
 
-        NGL.PluginRegistry.add( "SuperLooper2", "plugins/fragsearch.plugin" );
-        NGL.PluginRegistry.add( "sl2-example", "plugins/fragsearch-example.plugin" );
-        NGL.PluginRegistry.add( "new-sl2-job", "plugins/fragsearch-job.plugin" );
+        NGL.PluginRegistry.add( "SuperLooper2", "../plugins/fragsearch.plugin" );
+        NGL.PluginRegistry.add( "sl2-example", "../plugins/fragsearch-example.plugin" );
+        NGL.PluginRegistry.add( "new-sl2-job", "../plugins/fragsearch-job.plugin" );
        // NGL.PluginRegistry.add( "fragsearch-loader", "plugins/fragsearch-loader.plugin" );
 
         //

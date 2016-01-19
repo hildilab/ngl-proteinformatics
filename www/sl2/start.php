@@ -8,7 +8,7 @@
 <body>
     <div id="container">
 		<?php
-	include('navi.html');
+	include("navi.html");
 	?>	
 
     <div id="content" class="content">
