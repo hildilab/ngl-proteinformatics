@@ -808,6 +808,8 @@ var FragJobWidget = function( server, isFragfit ){
             job2.signals.statusChanged.add( function(){
                 if( job2.running === false ){
                     if( job2.check === true ){
+                        status.setDisplay( "none" );
+                        results.clear();
                         var baseUrl2 = job2.urlFor( "file" ) + "/";
                         var structurePdb2 = baseUrl2 + "input_pdb_file_tmdet.ply";
                         var initComp2 = function( comp2 ){
@@ -817,6 +819,11 @@ var FragJobWidget = function( server, isFragfit ){
                         }
                         stage.loadFile( structurePdb2, { ext: "ply" } ).then( initComp2 )
                     }
+                }else{
+                    status.setDisplay( "block" );
+                    status.clear().add(
+                        new UI.Text( "Membrane calculation running" )
+                    )
                 }
             } );
         } );
@@ -842,23 +849,35 @@ var FragJobWidget = function( server, isFragfit ){
         var resid1 = parseInt( inputval1.substring(0,inputval1.indexOf(':')) )-1;
         var chain1 = inputval1.split( ':' );
         if( resid2 < resid1 ) {
-            toolWidgetAll.form.dom.children["res2"].value = resid2.toString() + ":" + chain2[chain2.length-1];
             stage.eachComponent(function(comp){
                 if( comp.name === toolWidgetAll.form.dom.children["pdb_file"].files[0].name ) {
-                    var selection = new NGL.Selection( (resid2+1).toString() +":"+chain2[chain2.length-1] );
-                    var atom = comp.structure.getAtoms( selection, true );
-                    toolWidgetAll.form.dom.children['seq'].value = NGL.AA1[atom.resname] + toolWidgetAll.form.dom.children['seq'].value;
-                    // console.log( atom.resname + atom.resno + NGL.AA1[atom.resname] + (resid2+1).toString() );
+                    try {
+                        var selection = new NGL.Selection( (resid2+1).toString() +":"+chain2[chain2.length-1] );
+                        var atom = comp.structure.getAtoms( selection, true );
+                        var selection2 = new NGL.Selection( (resid2).toString() +":"+chain2[chain2.length-1] );
+                        var atom2 = comp.structure.getAtoms( selection2, true );
+                        NGL.AA1[atom2.resname];
+                        toolWidgetAll.form.dom.children["res2"].value = resid2.toString() + ":" + chain2[chain2.length-1];
+                        toolWidgetAll.form.dom.children['seq'].value = NGL.AA1[atom.resname] + toolWidgetAll.form.dom.children['seq'].value;
+                        // console.log( atom.resname + atom.resno + NGL.AA1[atom.resname] + (resid2+1).toString() );
+                    } catch(e) {}
+                    
                 }
             });
         }else if( resid1 <= resid2 ) {
-            toolWidgetAll.form.dom.children["res1"].value = resid1.toString() + ":" + chain1[chain1.length-1];
             stage.eachComponent( function(comp){
                 if( comp.name === toolWidgetAll.form.dom.children["pdb_file"].files[0].name ) {
-                    var selection = new NGL.Selection( (resid1+1).toString() +":"+chain1[chain1.length-1] );
-                    var atom = comp.structure.getAtoms( selection, true );
-                    toolWidgetAll.form.dom.children['seq'].value = NGL.AA1[atom.resname] + toolWidgetAll.form.dom.children['seq'].value;
-                    // console.log( atom.resname + atom.resno + NGL.AA1[atom.resname] + (resid1+1).toString() );
+                    try {
+                        var selection = new NGL.Selection( (resid1+1).toString() +":"+chain1[chain1.length-1] );
+                        var atom = comp.structure.getAtoms( selection, true );
+                        var selection2 = new NGL.Selection( (resid1).toString() +":"+chain1[chain1.length-1] );
+                        var atom2 = comp.structure.getAtoms( selection2, true );
+                        NGL.AA1[atom2.resname];
+                        toolWidgetAll.form.dom.children["res1"].value = resid1.toString() + ":" + chain1[chain1.length-1];
+                        toolWidgetAll.form.dom.children['seq'].value = NGL.AA1[atom.resname] + toolWidgetAll.form.dom.children['seq'].value;
+                        // console.log( atom.resname + atom.resno + NGL.AA1[atom.resname] + (resid1+1).toString() );
+                    } catch(e) {}
+                    
                 }
             } );
         }
@@ -873,23 +892,33 @@ var FragJobWidget = function( server, isFragfit ){
         var resid1 = parseInt(inputval1.substring(0,inputval1.indexOf(':')))+1;
         var chain1 = inputval1.split(':');
         if( resid2 >= resid1 ) {
-            toolWidgetAll.form.dom.children["res2"].value = resid2.toString() + ":" + chain2[chain2.length-1];
             stage.eachComponent(function(comp){
                 if( comp.name === toolWidgetAll.form.dom.children["pdb_file"].files[0].name ) {
-                    var selection = new NGL.Selection( (resid2-1).toString() +":"+chain2[chain2.length-1] );
-                    var atom = comp.structure.getAtoms( selection, true );
-                    toolWidgetAll.form.dom.children['seq'].value = toolWidgetAll.form.dom.children['seq'].value + NGL.AA1[atom.resname];
-                    // console.log( atom.resname + atom.resno + NGL.AA1[atom.resname] + (resid2-1).toString() );
+                    try {
+                        var selection = new NGL.Selection( (resid2-1).toString() +":"+chain2[chain2.length-1] );
+                        var selection2 = new NGL.Selection( (resid2).toString() +":"+chain2[chain2.length-1] );
+                        var atom = comp.structure.getAtoms( selection, true );
+                        var atom2 = comp.structure.getAtoms( selection2, true );
+                        NGL.AA1[atom2.resname];
+                        toolWidgetAll.form.dom.children['seq'].value = toolWidgetAll.form.dom.children['seq'].value + NGL.AA1[atom.resname];
+                        toolWidgetAll.form.dom.children["res2"].value = resid2.toString() + ":" + chain2[chain2.length-1];
+                        // console.log( atom.resname + atom.resno + NGL.AA1[atom.resname] + (resid2-1).toString() );
+                    } catch(e) {}
                 }
             });
         }else if( resid1 > resid2 ) {
-            toolWidgetAll.form.dom.children["res1"].value = resid1.toString() + ":" + chain1[chain1.length-1];
             stage.eachComponent(function(comp){
                 if( comp.name === toolWidgetAll.form.dom.children["pdb_file"].files[0].name ) {
-                    var selection = new NGL.Selection( (resid1-1).toString() +":"+chain1[chain1.length-1] );
-                    var atom = comp.structure.getAtoms( selection, true );
-                    toolWidgetAll.form.dom.children['seq'].value = toolWidgetAll.form.dom.children['seq'].value + NGL.AA1[atom.resname];
-                    // console.log( atom.resname + atom.resno + NGL.AA1[atom.resname] + (resid1-1).toString() );
+                    try {
+                        var selection = new NGL.Selection( (resid1-1).toString() +":"+chain1[chain1.length-1] );
+                        var atom = comp.structure.getAtoms( selection, true );
+                        var selection2 = new NGL.Selection( (resid1).toString() +":"+chain1[chain1.length-1] );
+                        var atom2 = comp.structure.getAtoms( selection2, true );
+                        NGL.AA1[atom2.resname];
+                        toolWidgetAll.form.dom.children['seq'].value = toolWidgetAll.form.dom.children['seq'].value + NGL.AA1[atom.resname];
+                        toolWidgetAll.form.dom.children["res1"].value = resid1.toString() + ":" + chain1[chain1.length-1];
+                        // console.log( atom.resname + atom.resno + NGL.AA1[atom.resname] + (resid1-1).toString() );
+                    } catch(e) {}
                 }
             });
         }
@@ -923,29 +952,31 @@ var FragJobWidget = function( server, isFragfit ){
                 results.clear();
                 loadResults( job );
             }else{
+                status.setDisplay( "none" );
                 toolWidget.setDisplay( "block" );
                 results.clear();
                 results.add(
-                    new UI.Text( "ERROR running job: please check the input" ),
-                    new UI.Text( "Hint: " + job.log[job.log.length-1].split("]")[1] )
+                    new UI.Text( "ERROR: not loops found, please consult the faq" )// ,
+                    // new UI.Text( "Hint: " + job.log[job.log.length-1].split("]")[1] )
                 );
             }
         }else{
             status.setDisplay( "block" );
             status.clear().add(
-                new UI.Text( "Check: " + job.check ),
-                new UI.Break(),
-                new UI.Text( "Running: " + job.running ),
-                new UI.Break(),
-                new UI.Text( "Log:" ),
-                new UI.Break()
+                new UI.Text( "Loopsearch: running" )
+                //new UI.Text( "Check: " + job.check ),
+                //new UI.Break(),
+                //new UI.Text( "Running: " + job.running ),
+                //new UI.Break(),
+                //new UI.Text( "Log:" ),
+                //new UI.Break()
             )
-            for( var i = 0; i < job.log.length; ++i ){
-                status.add(
-                    new UI.Text( job.log[ i ] ).setMarginLeft( "10px" ),
-                    new UI.Break()
-                );
-            }
+            //for( var i = 0; i < job.log.length; ++i ){
+            //    status.add(
+            //        new UI.Text( job.log[ i ] ).setMarginLeft( "10px" ),
+            //        new UI.Break()
+            //    );
+            //}
         }
 
     }
