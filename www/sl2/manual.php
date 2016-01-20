@@ -25,8 +25,7 @@
 		corner you find the general controls for the NGL viewer, located
 		in dropdown menus. The right panel contains the SL2 controls: a
 		button to start new jobs or to load an example. <br>  </a></td>
-        	<td ><img src="pictures/website_overview.png"  alt="logo"></td>
-
+        	<td ><img src="pictures/website_overview2.png" alt="logo"></td>
     </tr>
     </tbody></table>
     <table><tbody>
@@ -41,7 +40,9 @@
 	   from the form use the 'clear stems' button, afterwards, they can be filled by mouse selection again.
 	   Finally, the amino acids sequence of the missing segment has to be provided. To search for loops only
 	   originating from membrane proteins check the MembraneDB check-box, otherwise the full database will be
-	   searched. Depending on fragment length, a fragment search may take up to 30 seconds. When the job is
+	   searched. Additionally, the membrane can be calculated by applying informations from
+	   TMDET <a target="_self" href="references.php">[6]</a> and some further processing.
+	   Depending on fragment length, a fragment search may take up to 30 seconds. When the job is
 	   finished, the results are displayed automatically.</a>
        
       <h5> Modify search</h5>
@@ -50,7 +51,7 @@
        and the search sequence will be updated automatically. To modify the search parameters manually change the form and press
        submit. The result table will be updated after the search is completed. To start a completely new job please reload the web-site. Old results will be lost. </a>
        </td>
-               <td><img src="pictures/new_job.png" alt="logo"></td>
+               <td><img src="pictures/job.png" alt="logo"></td>
 
     </tr>
     </tbody></table>
@@ -72,7 +73,7 @@
 		The completed structure (initial model plus selected loop) can be downloaded by clicking the download symbol. Alternatively, the complete
 		list of loops can be downloaded for further analyses.       
 			</a></td>
-	        <td><img src="pictures/result_table_h.png" alt="logo"></td>
+	        <td><img src="pictures/results.png" alt="logo"></td>
 
      </tr>
     

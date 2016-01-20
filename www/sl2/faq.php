@@ -44,9 +44,19 @@ The user has to upload a protein and specify the sequence of the destined
 segment and the two stem residues of the gap where the segment has to be inserted.
 
 <h4>I get no results, what might be the problem?</h4><br>
-In some rare cases no suitable loops can be found. Try to extend the loop search by one amino acid in C- or N-terminal direction. 
+In some rare cases (too long or too short sequences for the given stem distance) no suitable loops can be found. Try to extend the loop search by one amino acid in C- or N-terminal direction.
 
-<h4>can the completed structure be downloaded from the server?</h4>
+<h4>Why are the sequence and the stems not further enlonged?</h4><br>
+In this case the end of the protein chain is reached. Try to enlong in the other direction.
+
+<h4>What does the color range stand for?</h4><br>
+The different colour schemes range from its min to its max value.
+<br>
+Clash scheme: white (no clashes) to orange to red (many)
+<br>SequenceID scheme:  dark green (high) to light green (low)
+<br>Score scheme: green (high score --> better results) to blue (medium) to purple (low)
+
+<h4>Can the completed structure be downloaded from the server?</h4>
 <br>
 As soon as a suitable fragment is found and selected by the user,
 the structure can be downloaded with the inserted fragment which
