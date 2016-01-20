@@ -510,16 +510,25 @@ var FragResultsWidget = function( data ){
             name: "Sequence",
             index: isFragfit ? 4 : 3,
             align: "left",
-            width: linkerItems[ 0 ][ isFragfit ? 4 : 3 ].length * 10,
+            width: linkerItems[ 0 ][ isFragfit ? 4 : 3 ].length * 10+2,
             format: function( value ){
-                if (value.indexOf("G"||"P")!=-1){ return new UI.Html( "<u>" + value + "</u>" ); }
-                else{
-                return new UI.Html(value );;
-            }
+                if (value.indexOf("G"||"P")!=-1){
+                    var newval = ""
+                    for (var i=0; i < value.length; i++) {
+                        if (value[i]==="G" || value[i]==="P") {
+                            newval = newval + "<u><b>" + value[i] + "</b></u>"
+                        }else{
+                            newval = newval + value[i]
+                        }
+                    }
+                    return new UI.Html( '<FONT SIZE = 3 FACE="Courier">'+newval+'</FONT>' );
+                }else{
+                    return new UI.Html('<FONT SIZE = 3 FACE="Courier">'+value+'</FONT>' );
                 }
+            }
         },
         {
-            name: "Sequence Identity",
+            name: "Seq Identity",
             index: isFragfit ? 8 : 7,
             align: "right",
             width: 35,
@@ -528,7 +537,7 @@ var FragResultsWidget = function( data ){
             }
         },
         {
-            name: "Sequence Position",
+            name: "Seq Position",
             index: isFragfit ? 7 : 6,
             align: "right",
             width: 90
@@ -598,7 +607,7 @@ var FragResultsWidget = function( data ){
     }
 
     container.add(
-        new UI.Text( "Color scheme:" ).setMarginRight( "10px" ),
+        new UI.Text( "Color scheme:" ).setMarginRight( "15px" ),
         linkercolorSelect,
         new UI.Break()
     );
@@ -797,7 +806,7 @@ var FragJobWidget = function( server, isFragfit ){
     var clear = new UI.Button( "clear input fields" );
     var extendn = new UI.Button( "extend n-term" );
     var extendc = new UI.Button( "extend c-term" );
-    toolWidgetAll.container.add( new UI.Break(), membraneplane, new UI.Break(), clear, new UI.Break(), extendn, extendc );
+    toolWidgetAll.container.add( new UI.Break(), new UI.Break(), membraneplane, clear, new UI.Break(), extendn, extendc );
 
     //membraneplane
     membraneplane.onClick( function (){
