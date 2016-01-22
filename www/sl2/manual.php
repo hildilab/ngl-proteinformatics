@@ -25,7 +25,7 @@
 		corner you find the general controls for the NGL viewer, located
 		in dropdown menus. The right panel contains the SL2 controls: a
 		button to start new jobs or to load an example. <br>  </a></td>
-        	<td ><img src="pictures/website_overview2.png" alt="logo"></td>
+        	<td ><img src="pictures/website_overview.png" alt="logo"></td>
     </tr>
     </tbody></table>
     <table><tbody>

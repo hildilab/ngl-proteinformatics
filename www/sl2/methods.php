@@ -85,6 +85,12 @@
 	smaller than 1 &Aring are removed from the results list.</p>
         <div id="teaser" align="center">
         <img src="pictures/workflow.png" width="40%" height="40%" alt="logo" align=middle>
+	 <h2>Membrane planes</h2>
+	 <p>For the calculation of the membrane planes we employ the web-service TMDET.
+	 As result of the calculation TMDET <a target="_self" href="references.php">[6]</a> provides a list of residues that tangent the membrane.
+	 From the coordinates  of C&alpha; atoms of these residues, we then calculate a best-fit plane
+	 which is displayed in NGL.</p>
+	
         </div>
    </div>
    	<?php
