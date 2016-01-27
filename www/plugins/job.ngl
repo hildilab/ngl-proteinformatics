@@ -382,7 +382,7 @@ var ToolWidget = function( tool ){
 
         tether.position();
 
-    };
+    }.bind( this );
 
     // form
     tool.args.forEach( function( arg ){
