@@ -25,7 +25,7 @@
            SuperLooper2 is an interactive web service for the insertion
 	   of missing segments such as loops in proteins. Loop candidates
 	   are selected from a pre-calculated database containing ~700 million
-	   protein fragments with of 3-35 residues length. The fragments are
+	   protein fragments with a residue length of 3-35. The fragments are
 	   extracted from structural coordinates deposited in the RSCB PDB <a target="_self" href="references.php">[4]</a>.
 	   
            <h3>Visualization</h3>
