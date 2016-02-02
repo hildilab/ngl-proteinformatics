@@ -12,7 +12,7 @@ var FragResultsPreset = function( data, params ){
 
     var surfaceOpacity = p.surfaceOpacity || 0.6;
 
-    stage.viewer.setFog( null, 40, 60 );
+    stage.viewer.setFog( null, 40, 80 );
 
     // structure
 
