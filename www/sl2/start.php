@@ -31,13 +31,13 @@
            <h3>Visualization</h3>
            Integration of the NGL viewer <a target="_self" href="references.php">[7]</a>, a molecular viewer based on WebGL,
 	   allows visualization and interactive selection of a loop from a
-	   list of 50 suitable candidates. A color code is provided to
+	   list of 100 suitable candidates. A color code is provided to
 	   indicate clashes or  other relevant criteria to promote an
 	   individual choice of the most suitable loop.
 	   
            <h3>Results</h3>
            A selected loop can be downloaded inserted into
-	   the user provided protein. In addition, all 50 loop candidates can be downloaded
+	   the user provided protein. In addition, all 100 loop candidates can be downloaded
 	   for further analyses. 
 
         </div>

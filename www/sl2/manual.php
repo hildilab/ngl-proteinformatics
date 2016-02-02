@@ -60,7 +60,7 @@
     <tr>
         <td><a>
 		The top candidate loop is automatically displayed in the NGL viewer together with the uploaded protein (model).
-		Other loops can be selected from the list of 50 candidates by visualization or by using the information
+		Other loops can be selected from the list of 100 candidates by visualization or by using the information
 		provided in the table at the right panel for guidance. This table includes the following information for
 		each candidate loop: an ID, a score, a clash score, the PDB ID and the position of the fragment in the
 		template protein and a comparison of the user-defined input sequence with the template sequence (sequence similarity).

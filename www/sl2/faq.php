@@ -56,6 +56,9 @@ Clash scheme: white (no clashes) to orange to red (many)
 <br>SequenceID scheme:  dark green (high) to light green (low)
 <br>Score scheme: green (high score --> better results) to blue (medium) to purple (low)
 
+<h4>When is a clash considered as a clash?</h4><br>
+A clash is counted as a clash if the backbone atoms overlap within 3 A.
+
 <h4>Can the completed structure be downloaded from the server?</h4>
 <br>
 As soon as a suitable fragment is found and selected by the user,
