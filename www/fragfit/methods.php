@@ -82,11 +82,16 @@
 	by a score calculated from the sequence similarity and matching of the geometrical
 	fingerprints of the (template) fragment and the target segment. To maximize the
 	conformational space, fragments with an identical sequence or a backbone RMSD
-	smaller than 1 &Aring are removed from the results list.</p>
+	smaller than 1 &Aring are removed from the results list.<br><br>
+	To minimize computation time, a minimal box containing the density of the missing fragment is extracted from the experimental map. The box size of the cryo-EM density map is reduced during two preprocessing steps. First, the box size is estimated from the maximum fragment length (i.e. assuming an unstructured conformation with maximal extend) and the distance between its stem atoms ('latitude'). A box is then cut out from the experimental EM-map with an edge length that doubles this latitude value and with its center at the midpoint between the two stem- atoms. 
+Second, to prevent taking into account densities already occupied by atoms, these densities are deleted from the box prior calculation of cross correlation. For that purpose, existing structures within the minimal box are first converted into artificial densities with the intensity levels adjusted to the values of the experimental map. With a simple arithmetic operation, the artificial map is subtracted from the experimental map. These preprocessing steps therefore not only improve calculation time, but also performance. 
+Finally the found fitting fragments are re-scored according to their cross-correlation to this preprocessed cryo-EM map.</p>
         <div id="teaser" align="center">
         <img src="pictures/workflow.png" width="40%" height="40%" alt="logo" align=middle>
 	 <h2>Membrane planes</h2>
-	 <p>For the calculation of the membrane planes we employ the web-service TMDET.
+	 <p>
+	If the 
+	For the calculation of the membrane planes we employ the web-service TMDET.
 	 As result of the calculation TMDET <a target="_self" href="references.php">[6]</a> provides a list of residues that tangent the membrane.
 	 From the coordinates  of C&alpha; atoms of these residues, we then calculate a best-fit plane
 	 which is displayed in NGL.</p>

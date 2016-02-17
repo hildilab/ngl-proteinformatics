@@ -69,9 +69,18 @@
 					<span class="issue">21, 1276&#151;7</span>
 				</div>
 			</li>
-        <h2>Visualization</h2>
 			<li>
 				<div class="reference" id="7">
+					<span class="title">SPIDER and WEB: processing and visualization of images in 3D electron microscopy and related fields.</span>
+					<span class="authors">Frank,J. et al. </span>
+					<span class="magazine">J. Struct. Biol.</span>
+					<span class="year">(1996)</span>
+					<span class="issue">116, 190&#151;9</span>
+				</div>
+			</li>
+        <h2>Visualization</h2>
+			<li>
+				<div class="reference" id="8">
 					<span class="title">NGL Viewer: a web application for molecular visualization.</span>
 					<span class="authors">Rose, A.S. and Hildebrand, P.W.</span>
 					<span class="magazine">Nucleic Acids Res.</span>
@@ -81,7 +90,7 @@
 			</li>
         <h2>Further reading</h2>
 			<li>
-				<div class="reference" id="8">
+				<div class="reference" id="9">
 					<span class="title">FREAD revisited: Accurate loop structure prediction using a database search algorithm.</span>
 					<span class="authors">Choi, Y. and Deane, C.M.</span>
 					<span class="magazine">Proteins</span>
@@ -90,7 +99,7 @@
 				</div>
 			</li>
 			<li>
-				<div class="reference" id="9">
+				<div class="reference" id="10">
 					<span class="title">Fragment-based modeling of membrane protein loops: successes, failures, and prospects for the future.</span>
 					<span class="authors">Kelm, S. et al.</span>
 					<span class="magazine">Proteins</span>

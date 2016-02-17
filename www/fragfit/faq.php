@@ -16,7 +16,7 @@
         
        <h4> Is a registration required?</h4>
 <br>
-No, SL2 is free for all users and no login is required.
+No, FragFit is free for all users and no login is required.
 
 
 <h4>Which web-browsers are supported?</h4><br>
@@ -34,13 +34,13 @@ that are provided by every modern web-browser. Additional
 installations are not needed. Please make sure that you have updated your browser
 to the latest version.
 
-<h4>WHAT is the PURPOSE of sl2?</h4>
+<h4>WHAT is the PURPOSE of FragFit?</h4>
 <br>
-SL2 can be used to interactively insert protein segments, such as loops of 3 to 35 residues length, into gaps of protein structures.
+FragFit can be used to interactively insert protein segments, such as loops of 3 to 35 residues length, into gaps of protein structures guided by a cryo-EM map.
 
 <h4>What has to be provided to start a search?</h4>
 <br>
-The user has to upload a protein and specify the sequence of the destined
+The user has to upload a protein and a cryo-EM map and specify the sequence of the destined
 segment and the two stem residues of the gap where the segment has to be inserted.
 
 <h4>I get no results, what might be the problem?</h4><br>
@@ -55,6 +55,7 @@ The different colour schemes range from its min to its max value.
 Clash scheme: white (no clashes) to orange to red (many)
 <br>SequenceID scheme:  dark green (high) to light green (low)
 <br>Score scheme: green (high score --> better results) to blue (medium) to purple (low)
+<br>Correlation sheme: dark blue (high score --> better results)to  light blue to yellow (low)
 
 <h4>Can the completed structure be downloaded from the server?</h4>
 <br>
@@ -75,7 +76,9 @@ before further usage of the model.
 All found loops can be downloaded in a single PDB-file where the individual loops are separated by a model tag.<br>
 A single loop can be downloaded renumbered and inserted at the correct position in the user-provided structure file.
 
+<h4>What map formats are supported?</h4>
 
+<br>
 
 
 
