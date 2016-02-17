@@ -21,11 +21,11 @@
     <h3>Start</h3>
     <tr>
         <td > <br><a>
-		The FargFit start display has two different panels. In the upper left
+		The FragFit start display has two different panels. In the upper left
 		corner you find the general controls for the NGL viewer, located
 		in dropdown menus. The right panel contains the FargFit controls: a
 		button to start new jobs, to load an example or to load existing results. <br>  </a></td>
-        	<td ><img src="pictures/website_overview.png" width ="100 %", Height=" 100%" alt="logo"></td>
+        	<td ><img src="pictures/website_overview_s.png"  alt="logo"></td>
     </tr>
     </tbody></table>
     <table><tbody>
