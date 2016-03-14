@@ -14,23 +14,23 @@
     <div id="content" class="content">
         <h1>References</h1>
 		<ol>
-			<h2>Methods and Datasets</h2>
-			<li>
+			
+			<h2>Methods, Datasets and Visualization</h2>
 				<div class="reference" id="1">
-					<span class="title">SuperLooper--a prediction server for the modeling of loops in globular and membrane proteins.</span>
-					<span class="authors">Hildebrand, P.W. et al.</span>
+					<span class="title">The RCSB Protein Data Bank: new resources for research and education.</span>
+					<span class="authors">Rose, P.W. et al.</span>
 					<span class="magazine">Nucleic Acids Res.</span>
-					<span class="year">(2009)</span>
-					<span class="issue">37, W571&#151;4.</span>
+					<span class="year">(2013)</span>
+					<span class="issue">41, D475&#151;82</span>
 				</div>
 			</li>
 			<li>
 				<div class="reference" id="2">
-					<span class="title">Loops In Proteins (LIP)--a comprehensive loop database for homology modelling.</span>
-					<span class="authors">Michalsky, E. et al.</span>
-					<span class="magazine">Protein Eng.</span>
-					<span class="year">(2003)</span>
-					<span class="issue">16, 979&#151;85.</span>
+					<span class="title">NGL Viewer: a web application for molecular visualization.</span>
+					<span class="authors">Rose, A.S. and Hildebrand, P.W.</span>
+					<span class="magazine">Nucleic Acids Res.</span>
+					<span class="year">(2015)</span>
+					<span class="issue">43, W576&#151;W579</span>
 				</div>
 			</li>
 			<li>
@@ -43,12 +43,13 @@
 				</div>
 			</li>
 			<li>
+			<li>
 				<div class="reference" id="4">
-					<span class="title">The RCSB Protein Data Bank: new resources for research and education.</span>
-					<span class="authors">Rose, P.W. et al.</span>
+					<span class="title">SuperLooper--a prediction server for the modeling of loops in globular and membrane proteins.</span>
+					<span class="authors">Hildebrand, P.W. et al.</span>
 					<span class="magazine">Nucleic Acids Res.</span>
-					<span class="year">(2013)</span>
-					<span class="issue">41, D475&#151;82</span>
+					<span class="year">(2009)</span>
+					<span class="issue">37, W571&#151;4.</span>
 				</div>
 			</li>
 			<li>
@@ -69,14 +70,13 @@
 					<span class="issue">21, 1276&#151;7</span>
 				</div>
 			</li>
-        <h2>Visualization</h2>
 			<li>
 				<div class="reference" id="7">
-					<span class="title">NGL Viewer: a web application for molecular visualization.</span>
-					<span class="authors">Rose, A.S. and Hildebrand, P.W.</span>
-					<span class="magazine">Nucleic Acids Res.</span>
-					<span class="year">(2015)</span>
-					<span class="issue">43, W576&#151;W579</span>
+					<span class="title">Loops In Proteins (LIP)--a comprehensive loop database for homology modelling.</span>
+					<span class="authors">Michalsky, E. et al.</span>
+					<span class="magazine">Protein Eng.</span>
+					<span class="year">(2003)</span>
+					<span class="issue">16, 979&#151;85.</span>
 				</div>
 			</li>
         <h2>Further reading</h2>
