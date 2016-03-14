@@ -594,6 +594,7 @@ var FragResultsWidget = function( data ){
                 colorScheme:linkercolorSelect.getValue()
             } )
         } );
+    linkercolorSelect.dom.selectedIndex=1
 
     if( isFragfit ){
         container.add(
