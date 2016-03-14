@@ -32,8 +32,8 @@
     <h3>SL2 job</h3>
     <tr>    
        <td>
-	<h5> Start search</h5><a>
-       
+	<b> Start search</b><a>
+       <br>
 	   To start a new SL2 job you have to provide a coordinate file of a protein structure in PDB format.
 	   The two stem residues flanking a missing segment or a segment that should be remodeled have to be
 	   typed in a form or selected from the NGL visualization by mouse selection. To clear the stem residues
@@ -44,8 +44,9 @@
 	   TMDET <a target="_self" href="references.php">[6]</a> and some further processing.
 	   Depending on fragment length, a fragment search may take up to 30 seconds. When the job is
 	   finished, the results are displayed automatically.</a>
-       
-      <h5> Modify search</h5>
+       <br>
+      <b> Modify search</b>
+	  <br>
        <a>If no suitable loop was found a possible solution is to extend the loop search in N- or C- terminal direction.
        To do this push one of the extension buttons. The stem residue will be changed by one into the chosen direction
        and the search sequence will be updated automatically. To modify the search parameters manually change the form and press
