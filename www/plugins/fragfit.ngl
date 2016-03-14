@@ -276,6 +276,15 @@ var FragResultsWidget = function( data ){
             fragResultsPreset.cartoon2Repr.setSelection( "*" );
             virtualTable.selectRow();
         } );
+        
+    // Show first
+
+    var showFirstBtn = new UI.Button( "show first" )
+        .onClick( function(){
+            fragResultsPreset.cartoon2Repr.setSelection( "/0" );
+            virtualTable.selectRow( 0 );
+        } );
+        
 
     // PDB info
 
@@ -616,6 +625,7 @@ var FragResultsWidget = function( data ){
     container.add(
         new UI.Break(),
         showAllBtn.setMarginRight( "10px" ),
+        showFirstBtn.setMarginRight( "10px" ),
         downloadAllBtn,
         new UI.Break(),
         new UI.Break(),
