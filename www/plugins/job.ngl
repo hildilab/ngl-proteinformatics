@@ -346,7 +346,7 @@ var ToolWidget = function( tool ){
 
     var form = new UI.Form();
     this.form = form;
-    var submit = new UI.Button( "submit" );
+    var submit = new UI.Button( "Submit" );
     
     this.container.add(
         form, submit
