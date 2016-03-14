@@ -78,6 +78,9 @@ before further usage of the model.
 All found loops can be downloaded in a single PDB-file where the individual loops are separated by a model tag.<br>
 A single loop can be downloaded renumbered and inserted at the correct position in the user-provided structure file.
 
+<h4>How often will the database been updated?</h4>
+<br>
+The Database will be updated at least every three month.
 
 
 

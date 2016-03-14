@@ -37,7 +37,7 @@
 	   To start a new SL2 job you have to provide a coordinate file of a protein structure in PDB format.
 	   The two stem residues flanking a missing segment or a segment that should be remodeled have to be
 	   typed in a form or selected from the NGL visualization by mouse selection. To clear the stem residues
-	   from the form use the 'clear stems' button, afterwards, they can be filled by mouse selection again.
+	   from the form use the 'clear input fields' button, afterwards, they can be filled by mouse selection again.
 	   Finally, the amino acids sequence of the missing segment has to be provided. To search for loops only
 	   originating from membrane proteins check the MembraneDB check-box, otherwise the full database will be
 	   searched. Additionally, the membrane can be calculated by applying informations from
