@@ -1189,14 +1189,14 @@ function fragsearchStage(){
     panel.setName( "SuperLooper2" );
 
     var description = new UI.Panel().add(
-        new UI.Html( "Start a new Sl2 job or load an example" )
+        new UI.Html( "Start a new SL2 job or load an example" )
     );
 
-    var newJobBtn = new UI.Button( "New Job" )
+    var newJobBtn = new UI.Button( "New SL2 Job" )
         .onClick( makePluginLoader( "New SL2 Job" ) );
 
-    var exampleBtn = new UI.Button( "Load Example" )
-        .onClick( makePluginLoader( "SL2 Example" ) );
+    var exampleBtn = new UI.Button( "Load SL2 Example" )
+        .onClick( makePluginLoader( "Load SL2 Example" ) );
 
 //    var loaderBtn = new UI.Button( "Results Loader" )
 //        .onClick( makePluginLoader( "fragsearch-loader" ) );
