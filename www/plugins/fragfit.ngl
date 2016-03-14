@@ -1193,13 +1193,13 @@ function fragsearchStage(){
     );
 
     var newJobBtn = new UI.Button( "New Job" )
-        .onClick( makePluginLoader( "new-sl2-job" ) );
+        .onClick( makePluginLoader( "New SL2 Job" ) );
 
     var exampleBtn = new UI.Button( "Load Example" )
-        .onClick( makePluginLoader( "sl2-example" ) );
+        .onClick( makePluginLoader( "SL2 Example" ) );
 
-    var loaderBtn = new UI.Button( "Results Loader" )
-        .onClick( makePluginLoader( "fragsearch-loader" ) );
+//    var loaderBtn = new UI.Button( "Results Loader" )
+//        .onClick( makePluginLoader( "fragsearch-loader" ) );
 
     panel.add(
         description,
