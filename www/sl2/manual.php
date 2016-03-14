@@ -41,7 +41,7 @@
 	   Finally, the amino acids sequence of the missing segment has to be provided. To search for loops only
 	   originating from membrane proteins check the MembraneDB check-box, otherwise the full database will be
 	   searched. Additionally, the membrane can be calculated by applying informations from
-	   TMDET <a target="_self" href="references.php">[6]</a> and some further processing.
+	   TMDET <a target="_self" href="references.php">[3]</a> and some further processing.
 	   Depending on fragment length, a fragment search may take up to 30 seconds. When the job is
 	   finished, the results are displayed automatically.</a>
        <br>

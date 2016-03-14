@@ -35,14 +35,13 @@
 			</li>
 			<li>
 				<div class="reference" id="3">
-					<span class="title">ModLoop: automated modeling of loops in protein structures.</span>
-					<span class="authors">Fiser, A. and Sali, A.</span>
+					<span class="title">TMDET: web server for detecting transmembrane regions of proteins by using their 3D coordinates.</span>
+					<span class="authors">Tusn&aacute;dy, G.E. et al.</span>
 					<span class="magazine">Bioinformatics</span>
-					<span class="year">(2003)</span>
-					<span class="issue">19, 2500&#151;2501</span>
+					<span class="year">(2005)</span>
+					<span class="issue">21, 1276&#151;7</span>
 				</div>
 			</li>
-			<li>
 			<li>
 				<div class="reference" id="4">
 					<span class="title">SuperLooper--a prediction server for the modeling of loops in globular and membrane proteins.</span>
@@ -63,13 +62,14 @@
 			</li>
 			<li>
 				<div class="reference" id="6">
-					<span class="title">TMDET: web server for detecting transmembrane regions of proteins by using their 3D coordinates.</span>
-					<span class="authors">Tusn&aacute;dy, G.E. et al.</span>
+					<span class="title">ModLoop: automated modeling of loops in protein structures.</span>
+					<span class="authors">Fiser, A. and Sali, A.</span>
 					<span class="magazine">Bioinformatics</span>
-					<span class="year">(2005)</span>
-					<span class="issue">21, 1276&#151;7</span>
+					<span class="year">(2003)</span>
+					<span class="issue">19, 2500&#151;2501</span>
 				</div>
 			</li>
+			<li>
 			<li>
 				<div class="reference" id="7">
 					<span class="title">Loops In Proteins (LIP)--a comprehensive loop database for homology modelling.</span>
