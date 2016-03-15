@@ -16,6 +16,7 @@
 		<ol>
 			
 			<h2>Methods, Datasets and Visualization</h2>
+			<li>
 				<div class="reference" id="1">
 					<span class="title">The RCSB Protein Data Bank: new resources for research and education.</span>
 					<span class="authors">Rose, P.W. et al.</span>
