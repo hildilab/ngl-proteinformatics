@@ -119,6 +119,31 @@
 
         function onInit(){
             var stage = new NGL.Stage();
+            
+            NGL.MenubarWidget = function( stage ){
+
+                var container = new UI.Panel();
+            
+                //container.add( new NGL.MenubarFileWidget( stage ) );
+                container.add( new NGL.MenubarViewWidget( stage ) );
+                //if( NGL.ExampleRegistry.count > 0 ){
+                //    container.add( new NGL.MenubarExamplesWidget( stage ) );
+                //}
+                //if( NGL.PluginRegistry.count > 0 ){
+                //    container.add( new NGL.MenubarPluginsWidget( stage ) );
+                //}
+                container.add( new NGL.MenubarHelpWidget( stage ) );
+            
+                container.add(
+                    new UI.Panel().setClass( "menu" ).setFloat( "right" ).add(
+                        new UI.Text( "NGL Viewer " + NGL.REVISION ).setClass( "title" )
+                    )
+                );
+            
+                return container;
+            
+            };
+
             NGL.StageWidget( stage );
 
             var example = NGL.GET( "example" );
