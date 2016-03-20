@@ -838,7 +838,26 @@ var FragJobWidget = function( server, isFragfit ){
                             return comp2;
                         }
                         stage.loadFile( structurePdb2, { ext: "ply" } ).then( initComp2 )
+                    }else if (job2.stop === true ) {
+                        status.setDisplay( "block" );
+                        status.clear().add(
+                            new UI.Text( "Membrane calculation stoped" )
+                        )
+                    }else{
+                        status.setDisplay( "block" );
+                        status.clear().add(
+                            new UI.Text( "Membrane calculation not possible" )
+                        )
                     }
+                }else if (job2.stop === true ) {
+                    job2.check = false
+                    job2.running = false
+                    job2.signals.statusChanged.dispatch();
+                    status.setDisplay( "block" );
+                    status.clear().add(
+                        new UI.Text( "Membrane calculation stoped" )
+                    )
+                    job2.stop = false
                 }else{
                     status.setDisplay( "block" );
                     status.clear().add(
@@ -971,12 +990,19 @@ var FragJobWidget = function( server, isFragfit ){
                 status.setDisplay( "none" );
                 results.clear();
                 loadResults( job );
+            }else if( job.log[0] === "stoped" ){
+                status.setDisplay( "none" );
+                toolWidget.setDisplay( "block" );
+                results.clear();
+                results.add(
+                    new UI.Text( "Job stoped" )
+                );
             }else{
                 status.setDisplay( "none" );
                 toolWidget.setDisplay( "block" );
                 results.clear();
                 results.add(
-                    new UI.Text( "ERROR: no loops found, please consult the faq" )// ,
+                    new UI.Text( "ERROR: no loops found, please decrease or extend the termini or consult the faq" )// ,
                     // new UI.Text( "Hint: " + job.log[job.log.length-1].split("]")[1] )
                 );
             }

@@ -137,6 +137,7 @@ var Job = function( name, server, params ){
     this.running = undefined;
     this.tool = undefined;
     this.log = [];
+    this.stop = undefined;
 
     this.signals = {
         statusChanged: new signals.Signal(),
@@ -168,6 +169,7 @@ var Job = function( name, server, params ){
             var status = o.data;
             this.check = status.check;
             this.running = status.running;
+            this.stop = stopped;
             this.log = status.log;
             if( typeof callback === "function" ){
                 callback();
@@ -196,7 +198,16 @@ var Job = function( name, server, params ){
 
         this.getStatus( function(){
 
-            if( this.running ){
+            
+            if (stopped) {
+                this.running = false;
+                this.check = false;
+                this.log = ['stoped']
+                this.signals.statusChanged.dispatch();
+                clearInterval( getStatusIntervalId );
+                console.log("stopped")
+                stopped = false;
+            }else if( this.running ){
                 console.log("still running")
             }else{
                 clearInterval( getStatusIntervalId );
@@ -334,7 +345,7 @@ var JobSelectorWidget = function( server ){
     return jobSelect;
 
 };
-
+var stopped = false;
 
 var ToolWidget = function( tool ){
     
@@ -347,9 +358,10 @@ var ToolWidget = function( tool ){
     var form = new UI.Form();
     this.form = form;
     var submit = new UI.Button( "Submit" );
+    var stop = new UI.Button( "Stop" );
     
     this.container.add(
-        form, submit
+        form, submit, stop
     );
         // help
 
@@ -479,6 +491,12 @@ var ToolWidget = function( tool ){
             // }
             
     } );
+    
+    stop.onClick( function(){
+        var results = new UI.Panel();
+        stopped = true;
+    } );
+    
     
     function fileInputOnChange( e ){
         var file = e.target.files[ 0 ];
