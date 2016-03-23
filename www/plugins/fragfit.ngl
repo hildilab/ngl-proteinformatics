@@ -816,7 +816,7 @@ var FragJobWidget = function( server, isFragfit ){
     var membraneplane = new UI.Button( "Calculate membrane plane" );
     var clear = new UI.Button( "Clear input fields" );
     var extendn = new UI.Button( "Decrease N-terminal stem" );
-    var extendc = new UI.Button( "Extend C-terminal stem" );
+    var extendc = new UI.Button( "Increase C-terminal stem" );
     toolWidgetAll.container.add( new UI.Break(), new UI.Break(), membraneplane, clear, new UI.Break(), extendn, extendc );
 
     //membraneplane
