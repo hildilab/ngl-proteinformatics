@@ -143,18 +143,18 @@
                 return container;
             
             };
-            dragover = function( e ){
-                e.stopPropagation();
-                e.preventDefault();
-                e.dataTransfer.dropEffect = "none";
-            }
-            drop = function( e ){
-                e.stopPropagation();
-                e.preventDefault();
-            }
-            document.removeEventListener("dragover", dragover);
-            document.removeEventListener( "drop", drop);
-            
+            //dragover = function( e ){
+            //    e.stopPropagation();
+            //    e.preventDefault();
+            //    e.dataTransfer.dropEffect = "none";
+            //}
+            //drop = function( e ){
+            //    e.stopPropagation();
+            //    e.preventDefault();
+            //}
+            //document.removeEventListener("dragover", dragover);
+            //document.removeEventListener( "drop", drop);
+            //
             NGL.documentationUrl = "../ngl/doc/index.html"
             
             NGL.StageWidget( stage );
