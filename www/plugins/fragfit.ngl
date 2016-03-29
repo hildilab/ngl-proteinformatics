@@ -271,7 +271,7 @@ var FragResultsWidget = function( data ){
 
     // Show all linker
 
-    var showAllBtn = new UI.Button( "show all" )
+    var showAllBtn = new UI.Button( "Show all" )
         .onClick( function(){
             fragResultsPreset.cartoon2Repr.setSelection( "*" );
             virtualTable.selectRow();
@@ -279,7 +279,7 @@ var FragResultsWidget = function( data ){
         
     // Show first
 
-    var showFirstBtn = new UI.Button( "show first" )
+    var showFirstBtn = new UI.Button( "Show first" )
         .onClick( function(){
             fragResultsPreset.cartoon2Repr.setSelection( "/0" );
             virtualTable.selectRow( 0 );
@@ -398,7 +398,7 @@ var FragResultsWidget = function( data ){
         pdbWriter.download( "fragFitLinker" );
     }
 
-    var downloadAllBtn = new UI.Button( "download all" )
+    var downloadAllBtn = new UI.Button( "Download all" )
         .onClick(
             downloadAllLinker
         );
@@ -516,7 +516,7 @@ var FragResultsWidget = function( data ){
             width: 30
         },
         {
-            name: "Sequence",
+            name: "Template sequence",
             index: isFragfit ? 4 : 3,
             align: "left",
             width: linkerItems[ 0 ][ isFragfit ? 4 : 3 ].length * 10+2,
@@ -537,7 +537,7 @@ var FragResultsWidget = function( data ){
             }
         },
         {
-            name: "Seq Identity",
+            name: "Seq identity",
             index: isFragfit ? 8 : 7,
             align: "right",
             width: 35,
@@ -546,7 +546,7 @@ var FragResultsWidget = function( data ){
             }
         },
         {
-            name: "Seq Position",
+            name: "Seq position",
             index: isFragfit ? 7 : 6,
             align: "right",
             width: 90

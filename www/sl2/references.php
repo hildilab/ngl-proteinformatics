@@ -71,7 +71,6 @@
 				</div>
 			</li>
 			<li>
-			<li>
 				<div class="reference" id="7">
 					<span class="title">Loops In Proteins (LIP)--a comprehensive loop database for homology modelling.</span>
 					<span class="authors">Michalsky, E. et al.</span>

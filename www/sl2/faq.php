@@ -36,7 +36,7 @@ to the latest version.
 
 <h4>WHAT is the PURPOSE of sl2?</h4>
 <br>
-SL2 can be used to interactively insert protein segments, such as loops of 3 to 35 residues length, into gaps of protein structures.
+SL2 can be used to interactively insert protein segments such as loops of 3 to 35 residues length into gaps of protein structures.
 
 <h4>What has to be provided to start a search?</h4>
 <br>
@@ -69,7 +69,7 @@ by the user.
 <h4>Are the sidechains of the loop included?</h4>
 <br>
 We add sidechains in a standard configuration.
-This might lead to clashes. Please have in mind
+These might lead to clashes. Please have in mind
 that an energy minimization might be necessary
 before further usage of the model.
 

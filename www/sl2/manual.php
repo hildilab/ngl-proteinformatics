@@ -36,21 +36,26 @@
        <br>
 	   To start a new SL2 job you have to provide a coordinate file of a protein structure in PDB format.
 	   The two stem residues flanking a missing segment or a segment that should be remodeled have to be
-	   typed in a form or selected from the NGL visualization by mouse selection. To clear the stem residues
-	   from the form use the 'clear input fields' button, afterwards, they can be filled by mouse selection again.
+	   typed in a form, or selected from the NGL visualization by mouse selection. To clear the stem residues
+	   from the form, use the 'Clear input fields' button, afterwards, they can be filled by mouse selection again.
 	   Finally, the amino acids sequence of the missing segment has to be provided. To search for loops only
 	   originating from membrane proteins check the MembraneDB check-box, otherwise the full database will be
 	   searched. Additionally, the membrane can be calculated by applying informations from
 	   TMDET <a target="_self" href="references.php">[3]</a> and some further processing.
 	   Depending on fragment length, a fragment search may take up to 30 seconds. When the job is
-	   finished, the results are displayed automatically.</a>
+	   finished, the results are displayed automatically. To stop a running job press the 'Stop' button.<br>
+	   Please be aware that the protein structure that should be used for the loop search has to be uploaded via the
+	   file upload dialog of the SL2 job formular (not by drag and drop). To visualize additional molecules that are not used to search loops
+	   drag the file into the viewer. If additional molecules are loaded, be aware of selecting only stem residues
+	   of the molecule loaded by the 'SL2 job formular'.
+	   
+	   </a>
        <br>
       <b> Modify search</b>
 	  <br>
-       <a>If no suitable loop was found a possible solution is to extend the loop search in N- or C- terminal direction.
-       To do this push one of the extension buttons. The stem residue will be changed by one into the chosen direction
+       <a>If no suitable loop was found, one possible solution is to extend the loop search in N- or C- terminal direction by pushing the "Decrease N-terminal stem" or "Increase C-terminal stem" button. The stem residue will be changed by one into the chosen direction
        and the search sequence will be updated automatically. To modify the search parameters manually change the form and press
-       submit. The result table will be updated after the search is completed. To start a completely new job please reload the web-site. Old results will be lost. </a>
+       submit. The result table will be updated after the search is completed. To start a completely new job, please reload the web-site. Old results will be lost. </a>
        </td>
                <td><img src="pictures/job.png" alt="logo"></td>
 
@@ -68,10 +73,11 @@
 		Sequences that are underlined contain prolines or glycines.
 		<br>
 		 By selecting a result, the loop is displayed together with the uploaded protein. The complete list of loop candidates can be displayed
-		simultaneously to visualize the conformational space of the loop. The loop can be colored according to its score, sequence identity or
+		simultaneously to visualize the conformational space of the loop. To get back to a single loop click a loop in the result table or use the "Show first" button to view the top hit again.
+		The loop can be colored according to its score, sequence identity or
 		clash score by selecting the corresponding color scheme from the dropdown menu. Additionally, the representation of the structure and
 		the loop (collapsed underneath the result table) can be changed as explained separatly in the documentation of the NGL viewer. 
-		The completed structure (initial model plus selected loop) can be downloaded by clicking the download symbol. Alternatively, the complete
+		The resulting structure (initial model plus selected loop) can be downloaded by clicking the download symbol. Alternatively, the complete
 		list of loops can be downloaded for further analyses.       
 			</a></td>
 	        <td><img src="pictures/results.png" alt="logo"></td>

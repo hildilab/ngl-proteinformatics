@@ -29,7 +29,7 @@
 	   extracted from structural coordinates deposited in the RSCB PDB <a target="_self" href="references.php">[1]</a>.
 	   
            <h3>Visualization</h3>
-           Integration of the NGL viewer <a target="_self" href="references.php">[2]</a>, a molecular viewer based on WebGL,
+           The integration of the NGL viewer <a target="_self" href="references.php">[2]</a>, a molecular viewer based on WebGL,
 	   allows visualization and interactive selection of a loop from a
 	   list of 100 suitable candidates. A color code is provided to
 	   indicate clashes or  other relevant criteria to promote an
