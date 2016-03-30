@@ -368,7 +368,7 @@ var ToolWidget = function( tool ){
     var helpText = new UI.Text();
     var helpPanel = new UI.OverlayPanel()
         .setDisplay( "none" )
-        .attach( this.dom )
+        .attach( panel.dom )
         .setMaxWidth( "250px" )
         .add( helpText );
 
