@@ -14,7 +14,7 @@
     <div id="content" class="content">
         <h1>SuperLooper2 </h1>
         <div id="teaser" align="center">
-        <img src="pictures/random2.png" width="40%" height="40%" alt="logo">
+        <img src="pictures/random2_small.png" width="40%" height="40%" alt="logo">
         </div>    
         <h2>Motivation</h2>
         <div class="middleblock">
