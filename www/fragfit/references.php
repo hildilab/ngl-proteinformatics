@@ -10,7 +10,7 @@
 	<?php
 	include('navi.html');
 	?>
-    </div>
+	</div>
     <div id="content" class="content">
         <h1>References</h1>
 		<ol>
@@ -107,6 +107,15 @@
 					<span class="issue">82, 175&#151;86</span>
 				</div>
 			</li>
+			<li>
+				<div class="reference" id="11">
+					<span class="title">SL2. an interactive webtool for modeling of missing segments in proteins.</span>
+					<span class="authors">Ismer, J. et al.</span>
+					<span class="magazine">Nucleic Acids Res.</span>
+					<span class="year">(2016)</span>
+					<span class="issue">44, W390&#151;W394</span>
+				</div>
+			</li>
 		</ol>
     <br>
 
@@ -116,6 +125,6 @@
    	<?php
 	include('footer.html');
 	?>
-    </div>
+	</div>
 </body>
 </html>

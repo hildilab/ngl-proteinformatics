@@ -7,19 +7,19 @@
 </head>
 <body>
    <div id="container">
-        <?php
+	<?php
 	include('navi.html');
 	?>
-    </div>
+   </div>
     <div id="content" class="content">
         <h1>Methods</h1>
         <h2>Database</h2>
         <p>To construct the database all overlapping fragments with a length
-	of 3 to 35 were extracted from a collection of more than 100.000 protein
+	of 3 to 35 were extracted from all protein
 	structures currently deposited in the PDB. For each fragment the following
 	information is stored in the database: Sequence, PDB identifier, location
 	in the protein and a geometrical fingerprint (see below). The total number
-	of fragments sum up to over 700 million. The number of available fragments
+	of fragments sum up to over 900 million. The number of available fragments
 	is decreasing with increasing number of residues. This is caused by the fact
 	that a smaller number of long fragments can be extracted from a structure, e.g.
 	for the fragment length of 3 amino acids 23 million fragments are available,
@@ -76,9 +76,9 @@
         <p>To minimize the calculation time of the fragment search a stepwise
 	approach is used. In a first step, all fragments with the defined sequence
 	length and which stem atoms matching the stem atoms of the gap with  at least
-	0.75 &Aring RMSD are selected. In the second step, the 500 top candidates are chosen
+	0.75 &Aring RMSD are selected. In the second step, the 100 top candidates are chosen
 	based on a quick estimation of the steric fit of the fragment to the rest of
-	the protein e.g. excluding clashes. Subsequently, these 500 fragment are ranked
+	the protein e.g. excluding clashes. Subsequently, these 100 fragment are ranked
 	by a score calculated from the sequence similarity and matching of the geometrical
 	fingerprints of the (template) fragment and the target segment. To maximize the
 	conformational space, fragments with an identical sequence or a backbone RMSD
@@ -88,6 +88,7 @@ Second, to prevent taking into account densities already occupied by atoms, thes
 Finally the found fitting fragments are re-scored according to their cross-correlation to this preprocessed cryo-EM map.</p>
         <div id="teaser" align="center">
         <img src="pictures/workflow.png" width="40%" height="40%" alt="logo" align=middle>
+		</div>
 	 <h2>Membrane planes</h2>
 	 <p>
 	If the 
@@ -101,6 +102,6 @@ Finally the found fitting fragments are re-scored according to their cross-corre
    	<?php
 	include('footer.html');
 	?>
-    </div>
+	</div>
 </body>
 </html>

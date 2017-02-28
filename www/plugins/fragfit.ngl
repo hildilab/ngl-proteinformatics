@@ -1136,26 +1136,26 @@ function fragfitExample(){
 
 function fragfitStage(){
 
-    panel.setName( "FragFit Stage" );
+    panel.setName( "FragFit" );
 
     var description = new UI.Panel().add(
-        new UI.Html( "FragFit description ..." )
+        new UI.Html( "Start a new FragFit job or load an example" )
     );
 
-    var newJobBtn = new UI.Button( "New Job" )
-        .onClick( makePluginLoader( "fragfit-job" ) );
+    var newJobBtn = new UI.Button( "New FragFit Job" )
+        .onClick( makePluginLoader( "New FragFit Job" ) );
         
-    var exampleBtn = new UI.Button( "Load Example" )
-        .onClick( makePluginLoader( "fragfit-example" ) );
+    var exampleBtn = new UI.Button( "Load FragFit Example" )
+        .onClick( makePluginLoader( "Load FragFit Example" ) );
         
-    var loaderBtn = new UI.Button( "Results Loader" )
-        .onClick( makePluginLoader( "fragfit-loader" ) );
+//    var loaderBtn = new UI.Button( "Results Loader" )
+//        .onClick( makePluginLoader( "fragfit-loader" ) );
 
     panel.add(
         description,
         new UI.Panel().add( newJobBtn ),
-        new UI.Panel().add( exampleBtn ),
-        new UI.Panel().add( loaderBtn )
+        new UI.Panel().add( exampleBtn )
+//        new UI.Panel().add( loaderBtn )
     );
 
 }
